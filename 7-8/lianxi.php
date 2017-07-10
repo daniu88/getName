@@ -9,11 +9,12 @@ $uu = strtotime("now")."<br/>";
 
 
 $rr = date("Y-m-d H:i:s",time())."<br/>";
-
+	
 echo $rr;
+	
 
-
-
+time();
+date();
 
  
 
@@ -24,5 +25,4 @@ echo $rr;
 
 
 
-
- ?>
+ ?>z
