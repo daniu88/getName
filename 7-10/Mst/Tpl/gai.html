@@ -46,6 +46,7 @@
                   <!-- <label for="exampleInputName2">昵称: </label>  -->
                   <input type="text"value="<?php echo $con["username"]  ?>" class="form-control" name="username" id="exampleInputName2">
                 </div>
+                <input type="hidden" name="id" value="<?php echo $id ?>">
                 <button type="submit" class="btn btn-success">改了！点我发布</button>
                 <textarea class="form-control" name="content" rows="3" style="display:block; margin-top:5px; width:100%;height:150px;"> <?php echo $con["content"]  ?> </textarea>
               </form>
