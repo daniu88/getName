@@ -12,7 +12,7 @@ file_put_contents("./db.txt", json_encode($lao));
 
 header("Location:./index.php");
 
-include './function.php';
+
 
 
 
