@@ -8,7 +8,7 @@ $miao = glob("./Upload/*");
 
 // var_dump($miao;
 
-include './zz.php';
+include './zz.php';	
 
 
 
