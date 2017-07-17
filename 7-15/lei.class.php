@@ -3,6 +3,15 @@
 
 include './fu.class.php';
 
+/**
+* 
+*/
+class zz
+{
+	
+	
+}
+
 
 $obj  = new fu();
 

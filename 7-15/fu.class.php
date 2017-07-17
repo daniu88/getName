@@ -6,7 +6,7 @@ include '../function.php';
 /**
 * 父类
 */
-class fu 
+class fu extends zz
 {
 	
 	public $name="这是一个父类";
@@ -15,7 +15,6 @@ class fu
 		echo "继承父类";
 	}
 }
-
 
 
 

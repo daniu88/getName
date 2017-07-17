@@ -33,8 +33,6 @@ class Upload
 
 
 
-
-
 	public function isError()
 	{
 		$this->data;
@@ -55,6 +53,8 @@ class Upload
 	{
 		$this->data;
 	}
+
+
 
 
 
