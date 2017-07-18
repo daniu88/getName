@@ -18,18 +18,18 @@ $color = imageColorAllocate($src,mt_rand(0,255),mt_rand(0,255),mt_rand(0,255));
 // imageellipse ( $src , 20 , 50, 100 , 100 , $color );
 
 // imagefilledellipse ( $src , 100 , 150, 100 , 100 ,$color );
-for ($i=0; $i < 100; $i++) { 
-	$color = imageColorAllocate($src,mt_rand(0,255),mt_rand(0,255),mt_rand(0,255)); 
-	imageline ($src , mt_rand(0,400), mt_rand(0,200), mt_rand(0,400), mt_rand(0,200),$color );
-}
+// for ($i=0; $i < 100; $i++) { 
+// 	$color = imageColorAllocate($src,mt_rand(0,255),mt_rand(0,255),mt_rand(0,255)); //设置颜色
+// 	imageline ($src , mt_rand(0,400), mt_rand(0,200), mt_rand(0,400), mt_rand(0,200),$color );//划线
+// }
 
-for ($i=0; $i < 1000; $i++) { 
-	$color = imageColorAllocate($src,mt_rand(0,255),mt_rand(0,255),mt_rand(0,255)); 
-	imagesetpixel ( $src , mt_rand(0,400), mt_rand(0,200),$color  ) ;
+// for ($i=0; $i < 1000; $i++) { 
+// 	$color = imageColorAllocate($src,mt_rand(0,255),mt_rand(0,255),mt_rand(0,255)); 
+// 	imagesetpixel ( $src , mt_rand(0,400), mt_rand(0,200),$color  ) ;//画一个单一像素
 
-}
+// }
 
-$str = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";
+$str = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";//设置输出字体
 $x = (400/4)*0.3;
 for ($i=0; $i < 4; $i++) { 
 	$font = $str[mt_rand(0,strlen($str)-1)]; 
