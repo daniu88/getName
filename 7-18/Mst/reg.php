@@ -16,6 +16,16 @@
         /*height: 200px;*/
         margin: 0 auto;
       }
+      .info{
+      line-height: 35px;
+    }
+      .glyphicon-ok{
+        color: #22B14C;
+      }
+
+      .glyphicon-remove{
+        color: red;
+      }
     </style>
   </head>
 
@@ -60,24 +70,53 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="inputEmail3" name="username" placeholder="username">
+              <input type="text" class="form-control" id="username" name="username" placeholder="username">
             </div>
+            <div class="info col-sm-5">
+            </div>
+
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
-            <div class="col-sm-5">
-              <input type="email" class="form-control" id="inputEmail3" name="email" placeholder="Email">
+            <div class="info col-sm-5">
+              <input type="email" class="form-control" id="emile"  name="email" placeholder="Email">
             </div>
+            
+            <div class="info col-sm-5">
+              <!-- <span class="info glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;用户名可以用 -->
+            </div>
+
+            
+
           </div>
           <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
-            <div class="col-sm-5">
-              <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
+            <div class="info col-sm-5">
+              <input type="password" class="form-control" id="Password1" name="password" placeholder="Password">
+            </div>
+          
+          <div class="info col-sm-5">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;密码格式错误请重新输入 
             </div>
           </div>
+
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
+            <div class="info col-sm-5">
+              <input type="password" class="form-control" id="Password2" name="password" placeholder="Password">
+            </div>
+          
+          <div class="info col-sm-5">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;密码格式错误请重新输入 
+            </div>
+          </div>
+
+
+
+
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-5">
-              <button type="submit" class="btn btn-default">注册</button>
+              <button type="submit" class="btn btn-default" disabled="">注册</button>
             </div>
           </div>
         </form>
@@ -102,5 +141,151 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+  <script type="text/javascript">
+    $(function  () {
+        $('#username').blur(function(event) {
+           data=$(this).val();
+           thex=$(this);
+           $.ajax({
+             url: './checkReg.php',
+             type: 'post',
+             dataType: 'json',
+             data: {username: data}, 
+           })
+           .done(function(respones) {
+            console.log(respones.error)
+
+            if (respones.error==0) {
+                thex.parent().siblings('.info').html("<span class='info glyphicon glyphicon-ok' aria-hidden='true'></span>&nbsp;"+respones.info);
+                  // thex.css('border', '1px solid #CCCCCC');
+            }else{
+                thex.parent().siblings('.info').html("<span class='info glyphicon  glyphicon-remove' aria-hidden='true'></span>&nbsp;"+respones.info);
+                thex.css('border', '1px solid red');
+            }
+
+           })
+           .fail(function() {
+             console.log("error");
+           })
+
+
+            $('#username').focus(function(event) {
+              $(this).css('border', '1px solid #CCCCCC');
+              $(this). parent().siblings('.info').html('');
+            });
+        });
+      
+  
+
+    $('#emile').blur(function(event) {
+        data=$(this).val();
+        thex=$(this);
+        $.ajax({
+          url: './checkReg.php',
+          type: 'post',
+          dataType: 'json',
+          data: {emile: data},
+        })
+        .done(function(youxiang) {
+          console.log(youxiang.error);
+            if (youxiang.error==0) {
+                thex.parent().siblings('.info').html("<span class='info glyphicon glyphicon-ok' aria-hidden='true'></span>&nbsp;"+youxiang.info);
+                  // thex.css('border', '1px solid #CCCCCC');
+            }else{
+                thex.parent().siblings('.info').html("<span class='info glyphicon  glyphicon-remove' aria-hidden='true'></span>&nbsp;"+youxiang.info);
+                thex.css('border', '1px solid red');
+            }
+
+
+        })
+        .fail(function() {
+          console.log("error");
+        })
+             $('#emile').focus(function(event) {
+              $(this).css('border', '1px solid #CCCCCC');
+              $(this). parent().siblings('.info').html('');
+        });
+        
+    });
+
+
+    $('#Password1').blur(function(event) {
+        // password_zz();
+        alert(8888);
+    });
+
+    $('#Password2').blur(function(event) {
+        // password_cc();
+    });
+
+
+   $.ajax({
+        url: './checkReg.php',
+        type: 'post',
+        dataType: 'json',
+        data: {Password1: data;Password2: data;},
+      })
+      .done(function() {
+        console.log("success");
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
