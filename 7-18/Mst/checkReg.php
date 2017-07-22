@@ -1,12 +1,28 @@
 <?php 
 
-if(isset($_POST['username'])){
-	username();
-}elseif(isset($_POST['emile'])){
-	email();
-}else{
-	password();
+switch ($_POST['username']) {
+	case 'username':
+		username();
+		break;
+	case 'emile':
+		email();
+		break;
+	case 'password':
+		password();
+		break;
+	
+	
 }
+
+
+
+// if(isset($_POST['username'])){
+// 	username();
+// }elseif(isset($_POST['emile'])){
+// 	email();
+// }elseif(isset($_POST['password'])){
+// 	password();
+// }
 
 
 
@@ -85,7 +101,11 @@ function email(){
 
 
 	function password(){
-		echo "888888";
+		$info=array(
+			'error'=>0,
+			'info'=>"密码可用"	
+			);
+	echo json_encode($info);
 	}
 
 

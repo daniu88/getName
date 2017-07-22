@@ -70,7 +70,7 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="username" name="username" placeholder="username">
+              <input type="text" data-name="username" class="check-data form-control" id="username" name="username" placeholder="username">
             </div>
             <div class="info col-sm-5">
             </div>
@@ -79,7 +79,7 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
             <div class="info col-sm-5">
-              <input type="email" class="form-control" id="emile"  name="email" placeholder="Email">
+              <input type="email" data-name="email" class="check-data form-control" id="emile"  name="email" placeholder="Email">
             </div>
             
             <div class="info col-sm-5">
@@ -92,7 +92,7 @@
           <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
             <div class="info col-sm-5">
-              <input type="password" class="form-control" id="Password1" name="password" placeholder="Password">
+              <input type="password" data-name="password" class="check-data form-control" id="Password1" name="password" placeholder="Password">
             </div>
           
           <div class="info col-sm-5">
@@ -103,7 +103,7 @@
           <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
             <div class="info col-sm-5">
-              <input type="password" class="form-control" id="Password2" name="password" placeholder="Password">
+              <input type="password" data-name="eqpassword" class="check-data form-control" id="Password2" name="password" placeholder="Password">
             </div>
           
           <div class="info col-sm-5">
@@ -144,14 +144,16 @@
 
   <script type="text/javascript">
     $(function  () {
-        $('#username').blur(function(event) {
+        $('.check-data').blur(function(event) {
+
            data=$(this).val();
+           name=$(this).attr('data-name');
            thex=$(this);
            $.ajax({
              url: './checkReg.php',
              type: 'post',
              dataType: 'json',
-             data: {username: data}, 
+             data: {name: name, value: data}, 
            })
            .done(function(respones) {
             console.log(respones.error)
@@ -170,7 +172,7 @@
            })
 
 
-            $('#username').focus(function(event) {
+            $('.check-data').focus(function(event) {
               $(this).css('border', '1px solid #CCCCCC');
               $(this). parent().siblings('.info').html('');
             });
@@ -178,63 +180,63 @@
       
   
 
-    $('#emile').blur(function(event) {
-        data=$(this).val();
-        thex=$(this);
-        $.ajax({
-          url: './checkReg.php',
-          type: 'post',
-          dataType: 'json',
-          data: {emile: data},
-        })
-        .done(function(youxiang) {
-          console.log(youxiang.error);
-            if (youxiang.error==0) {
-                thex.parent().siblings('.info').html("<span class='info glyphicon glyphicon-ok' aria-hidden='true'></span>&nbsp;"+youxiang.info);
-                  // thex.css('border', '1px solid #CCCCCC');
-            }else{
-                thex.parent().siblings('.info').html("<span class='info glyphicon  glyphicon-remove' aria-hidden='true'></span>&nbsp;"+youxiang.info);
-                thex.css('border', '1px solid red');
-            }
+    // $('#emile').blur(function(event) {
+    //     data=$(this).val();
+    //     thex=$(this);
+    //     $.ajax({
+    //       url: './checkReg.php',
+    //       type: 'post',
+    //       dataType: 'json',
+    //       data: {emile: data},
+    //     })
+    //     .done(function(youxiang) {
+    //       console.log(youxiang.error);
+    //         if (youxiang.error==0) {
+    //             thex.parent().siblings('.info').html("<span class='info glyphicon glyphicon-ok' aria-hidden='true'></span>&nbsp;"+youxiang.info);
+    //               // thex.css('border', '1px solid #CCCCCC');
+    //         }else{
+    //             thex.parent().siblings('.info').html("<span class='info glyphicon  glyphicon-remove' aria-hidden='true'></span>&nbsp;"+youxiang.info);
+    //             thex.css('border', '1px solid red');
+    //         }
 
 
-        })
-        .fail(function() {
-          console.log("error");
-        })
-             $('#emile').focus(function(event) {
-              $(this).css('border', '1px solid #CCCCCC');
-              $(this). parent().siblings('.info').html('');
-        });
+    //     })
+    //     .fail(function() {
+    //       console.log("error");
+    //     })
+    //          $('#emile').focus(function(event) {
+    //           $(this).css('border', '1px solid #CCCCCC');
+    //           $(this). parent().siblings('.info').html('');
+    //     });
         
-    });
+    // });
 
 
-    $('#Password1').blur(function(event) {
-        // password_zz();
-        alert(8888);
-    });
+   //  $('#Password1').blur(function(event) {
+   //      // password_zz();
+   //      alert(8888);
+   //  });
 
-    $('#Password2').blur(function(event) {
-        // password_cc();
-    });
+   //  $('#Password2').blur(function(event) {
+   //      // password_cc();
+   //  });
 
 
-   $.ajax({
-        url: './checkReg.php',
-        type: 'post',
-        dataType: 'json',
-        data: {Password1: data;Password2: data;},
-      })
-      .done(function() {
-        console.log("success");
-      })
-      .fail(function() {
-        console.log("error");
-      })
-      .always(function() {
-        console.log("complete");
-      });
+   // $.ajax({
+   //      url: './checkReg.php',
+   //      type: 'post',
+   //      dataType: 'json',
+   //      // data: {Password1: data;Password2: data;},
+   //    })
+   //    .done(function() {
+   //      console.log("success");
+   //    }) 
+   //    .fail(function() {
+   //      console.log("error");
+   //    })
+   //    .always(function() {
+   //      console.log("complete");
+   //    });
          
 
 
