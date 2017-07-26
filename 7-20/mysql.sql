@@ -58,27 +58,41 @@ create table question(
 
 );
 
-create table user(
-	id int(7)not null primary key AUTO_INCREMENT comment 'id',
-	username char(30) not null unique comment"昵称",
-	emlie char(30) not null unique comment"邮箱", 
-	password char(20) not null unique comment"密码",
-	sex enum("男","女","保密")not null default "保密" unique comment"性别",
-	site char(80) unique comment"地址",
-	jifen int(5) unsigned not null default"0" unique comment"积分",
-	sign char(30) not null default"这个人很懒什么都没有留下" unique comment"签名",
-	ava text unique comment"头像",
-	create_time int(7) not null unique comment"创建时间",
-	form enum("在线","离线","隐身")not null unique comment"状态"
+	create table user(
+		id int(7)not null primary key AUTO_INCREMENT comment 'id',
+		username char(16) not null unique comment"昵称",
+		emlie char(30) not null unique comment"邮箱", 
+		password char(32) not null comment"密码",
+		sex enum("男","女","保密")not null default "保密" comment"性别",
+		addr char(80) unique comment"地址",
+		jifen int(5) unsigned not null default"0" comment"积分",
+		sign char(30) not null default"这个人很懒什么都没有留下" comment"签名",
+		toux char(80) comment"头像",
+		create_time int(7) not null comment"创建时间",
+		form enum(0,1)not null comment"状态"
+
+
+	);
+
+
+
+	create table huida(
+		id int(7)not null primary key AUTO_INCREMENT comment 'id',
+		username char(16) not null unique comment"昵称",
+		sex enum("男","女","保密")not null default "保密" unique comment"性别",
+		jifen int(5) unsigned not null default"0" unique comment"积分",
+		form enum("在线","离线","隐身")not null unique comment"状态"
+		csale int(3)  unsigned not null default"0",
+		content text(500) not null comment '内容',
+		imgs text comment '头像'
+
+
+
+		);
 
 
 
 
-
-
-
-
-);
 
 
 

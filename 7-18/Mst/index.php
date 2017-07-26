@@ -1,6 +1,6 @@
  <?php 
  include './function.php';
- session_start();
+ session_start();	
 $db = file_get_contents("./db.txt");//读字符串
 $db = json_decode($db,true);//转成能看懂的数组
 

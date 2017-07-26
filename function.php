@@ -62,8 +62,28 @@ function Fmkdir($path){
 
 
 
+/**
+ * [C 读配置]
+ * @param [type] $config [description]
+ */
+function C($key){
+	$config=include '../config.php';
+	if (isset($config[$key])) {
+		return $config[$key];
+	}else{
+		echo "该配置项不存在";
+	}
+}
 
 
+/**
+ * [M 实例化数据操作类]
+ * @param [type] $table [description]
+ */
+// public function M($table)
+// {
+// 	return new Model($table);
+// }
 
 
 
