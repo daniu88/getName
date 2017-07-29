@@ -1,0 +1,60 @@
+[ 2017-07-27T17:05:32+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:44+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:44+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:44+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:49+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:49+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:49+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:49+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:49+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+ERR: 无法加载模块:Home
+
+[ 2017-07-27T17:05:50+08:00 ] 127.0.0.1 /GetName/bbs/index.php?m=home&c=reg&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+ERR: 无法加载模块:Home
+

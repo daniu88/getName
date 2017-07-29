@@ -80,10 +80,10 @@ function C($key){
  * [M 实例化数据操作类]
  * @param [type] $table [description]
  */
-// public function M($table)
-// {
-// 	return new Model($table);
-// }
+function M($table="")
+{
+ 	return new Model($table);
+}
 
 
 

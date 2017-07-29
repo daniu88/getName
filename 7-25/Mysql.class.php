@@ -69,18 +69,20 @@ class Model
 		//转字符串，组值，并逗号隔开
 		$values=implode("','",$data);
 		// var_dump($values);
-
+		//组执行sql语句，
 		$sql= "insert into ".$this->table."(".$key.")values('".$values."')";
-		var_dump($sql);
+		// var_dump($sql);
+		// 执行原生增加语句
 		$res = $this->exec($sql);
 		if ($res) {
+			//成功执行返回值
 			return self::$db->lastInsertId (); 
 		}else{
 			return false;
 		}
 	}
 
-
+	//数据删除方法
 	public function delete($id="")
 	{
 
