@@ -9,14 +9,14 @@
     </title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
     <link rel="stylesheet" href="/GetName/bbs/Public/layui/css/layui.css">
-    <link rel="stylesheet" href="/GetName/bbs/Public/css/global1.css">
-   
+    <link rel="stylesheet" href="/GetName/bbs/Public/css/global.css">
+    <script src="/GetName/bbs/Public/layui/layui.js"></script>
   </head>
   
   <body>
     <div class="header">
       <div class="main">
-        <a class="logo" href="/" title="Fly">
+        <a class="logo" href="/GetName/bbs" title="Fly">
           Fly社区
         </a>
         <div class="nav">
@@ -36,16 +36,39 @@
             框架
           </a>
         </div>
+        <?php if (isset($_SESSION['uid'])) { ?>
+
+          <div class="nav-user">
+            <a class="avatar" href="<?php echo U('home/user/index');?>">
+              <img src="/GetName/bbs/<?php echo $_SESSION['face'] ?>">
+              <cite>
+                <?php echo $_SESSION['nickname']; ?>
+              </cite>
+            </a>
+            <div class="nav">
+              <a href="<?php echo U('home/set/index');?>">
+                <i class="iconfont icon-shezhi">
+                </i>
+                设置
+              </a>
+              <a href="<?php echo U('home/login/logout');?>">
+                <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;">
+                </i>
+                退了
+              </a>
+            </div>
+          </div>
+       <?php }else{ ?>
         <div class="nav-user">
           <a class="unlogin" href="/user/login/">
             <i class="iconfont icon-touxiang">
             </i>
           </a>
           <span>
-            <a href="/user/login/">
+            <a href="<?php echo U('home/login/index');?>">
               登入
             </a>
-            <a href="/user/reg/">
+            <a href="<?php echo U('home/reg/index');?>">
               注册
             </a>
           </span>
@@ -58,9 +81,14 @@
             </a>
           </p>
         </div>
+        <?php } ?>
       </div>
     </div>
-    <div class="main layui-clear">
+
+
+
+
+         <div class="main layui-clear">
       <div class="fly-panel fly-panel-user" pad20>
         <div class="layui-tab layui-tab-brief" lay-filter="user">
           <ul class="layui-tab-title">
@@ -68,7 +96,7 @@
               登入
             </li>
             <li>
-              <a href="../Reg/index">
+              <a href="<?php echo U('home/reg/index');?>">
                 注册
               </a>
             </li>
@@ -137,7 +165,52 @@
         </div>
       </div>
     </div>
-    <div class="footer">
+    
+        	<script>
+        //Demo
+  layui.use(['layer', 'form','jquery'], function(){
+              var layer = layui.layer
+              ,form = layui.form();
+              $ = layui.jquery;
+              
+
+                //监听提交
+                 form.on('submit(login)', function(data){
+
+                  $.ajax({
+                    url: '<?php echo U('home/login/checkdata');?>',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: data.field,
+                  })
+                  .done(function(res) {
+                     if(res.error==1){
+                        layer.msg(res.info,function(){});
+                     }else{
+                        layer.alert(res.info, {icon: 6},function(){
+                            location.href="<?php echo U('home/set/index');?>";
+                        });
+                     }
+                  })
+                  .fail(function() {
+                    console.log("error");
+                  })
+
+                  return false;
+                          });
+
+            });
+
+        
+        </script>
+  </body>
+
+</html>
+
+
+
+
+     <div class="footer">
       <p>
         <a href="http://fly.layui.com/">
           Fly社区
@@ -159,40 +232,3 @@
         </a>
       </p>
     </div>
-    <script src="/GetName/bbs/Public/layui/layui.js">
-    </script>
-        	<script>
-        //Demo
-  layui.use(['layer', 'form','jquery'], function(){
-              var layer = layui.layer
-              ,form = layui.form();
-              $ = layui.jquery;
-              
-
-                //监听提交
-                 form.on('submit(login)', function(data){
-                 layer.msg(JSON.stringify(data.field));
-                    $.ajax({
-                        url: '<?php echo U("home/login/checkdata");?>',
-                        type: 'POST',
-                        dataType: 'json',
-                        data: data.field,
-                    })
-                    .done(function() {
-                       console.log("success");
-                    })
-                    .fail(function() {
-                        console.log("error");
-                    })
-                    
-
-                    return false;
-                });
-
-            });
-
-        
-        </script>
-  </body>
-
-</html>

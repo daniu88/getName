@@ -1,70 +1,77 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
-    
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>
-            注册 - Fly社区
-        </title>
-        <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
-        <link rel="stylesheet" href="/GetName/bbs/Public/layui/css/layui.css">
-        <link rel="stylesheet" href="/GetName/bbs/Public/css/global.css">
-    </head>
-    
-    <body>
-        <div class="header">
-            <div class="main">
-                <a class="logo" href="/" title="Fly">
-                    Fly社区
-                </a>
-                <div class="nav">
-                    <a href="/jie/">
-                        <i class="iconfont icon-wenda">
-                        </i>
-                        讨论
-                    </a>
-                    <a href="/case/2017/">
-                        <i class="iconfont icon-iconmingxinganli" style="top: 2px;">
-                        </i>
-                        案例
-                    </a>
-                    <a href="http://www.layui.com/">
-                        <i class="iconfont icon-ui">
-                        </i>
-                        框架
-                    </a>
-                </div>
-                <div class="nav-user">
-                    <a class="unlogin" href="/user/login/">
-                        <i class="iconfont icon-touxiang">
-                        </i>
-                    </a>
-                    <span>
-                        <a href="../Login/index">
-                            登入
-                        </a>
-                        <a href="layui-this">
-                            注册
-                        </a>
-                    </span>
-                    <p class="out-login">
-                        <a href="http://fly.layui.com/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
-                        class="iconfont icon-qq" title="QQ登入">
-                        </a>
-                        <a href="http://fly.layui.com/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
-                        class="iconfont icon-weibo" title="微博登入">
-                        </a>
-                    </p>
-                </div>
-            </div>
+  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>
+      登入 - Fly社区
+    </title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
+    <link rel="stylesheet" href="/GetName/bbs/Public/layui/css/layui.css">
+    <link rel="stylesheet" href="/GetName/bbs/Public/css/global.css">
+    <script src="/GetName/bbs/Public/layui/layui.js"></script>
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="main">
+        <a class="logo" href="/GetName/bbs" title="Fly">
+          Fly社区
+        </a>
+        <div class="nav">
+          <a href="/jie/">
+            <i class="iconfont icon-wenda">
+            </i>
+            讨论
+          </a>
+          <a href="/case/2017/">
+            <i class="iconfont icon-iconmingxinganli" style="top: 2px;">
+            </i>
+            案例
+          </a>
+          <a href="http://www.layui.com/">
+            <i class="iconfont icon-ui">
+            </i>
+            框架
+          </a>
         </div>
+        <div class="nav-user">
+          <a class="unlogin" href="/user/login/">
+            <i class="iconfont icon-touxiang">
+            </i>
+          </a>
+          <span>
+            <a href="<?php echo U('home/login/index');?>">
+              登入
+            </a>
+            <a href="<?php echo U('home/reg/index');?>">
+              注册
+            </a>
+          </span>
+          <p class="out-login">
+            <a href="http://fly.layui.com/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+            class="iconfont icon-qq" title="QQ登入">
+            </a>
+            <a href="http://fly.layui.com/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
+            class="iconfont icon-weibo" title="微博登入">
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+     
+
         <div class="main layui-clear">
             <div class="fly-panel fly-panel-user" pad20>
                 <div class="layui-tab layui-tab-brief" lay-filter="user">
                     <ul class="layui-tab-title">
                         <li>
-                            <a href="../Login/index">
+                            <a href="<?php echo U('home/login/index');?>">
                                 登入
                             </a>
                         </li>
@@ -155,30 +162,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <p>
-                <a href="http://fly.layui.com/">
-                    Fly社区
-                </a>
-                2017 &copy;
-                <a href="http://www.layui.com/">
-                    layui.com
-                </a>
-            </p>
-            <p>
-                <a href="http://fly.layui.com/jie/3147.html" target="_blank">
-                    产品授权
-                </a>
-                <a href="http://fly.layui.com/jie/8157.html" target="_blank">
-                    获取Fly社区模版
-                </a>
-                <a href="http://fly.layui.com/jie/2461.html" target="_blank">
-                    微信公众号
-                </a>
-            </p>
-        </div>
-        <script src="/GetName/bbs/Public/layui/layui.js">
-        </script>
+      
         <script>
  
             //一般直接写在一个js文件中
@@ -234,3 +218,29 @@
     </body>
 
 </html>
+
+
+
+
+     <div class="footer">
+      <p>
+        <a href="http://fly.layui.com/">
+          Fly社区
+        </a>
+        2017 &copy;
+        <a href="http://www.layui.com/">
+          layui.com
+        </a>
+      </p>
+      <p>
+        <a href="http://fly.layui.com/jie/3147.html" target="_blank">
+          产品授权
+        </a>
+        <a href="http://fly.layui.com/jie/8157.html" target="_blank">
+          获取Fly社区模版
+        </a>
+        <a href="http://fly.layui.com/jie/2461.html" target="_blank">
+          微信公众号
+        </a>
+      </p>
+    </div>
