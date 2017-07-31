@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>
+      注册 - Fly社区
+    </title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
+    <link rel="stylesheet" href="__PUBLIC__/layui/css/layui.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/global.css">
+    <script src="__PUBLIC__/layui/layui.js"></script>
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="main">
+        <a class="logo" href="__ROOT__" title="Fly">
+          Fly社区
+        </a>
+        <div class="nav">
+          <a href="/jie/">
+            <i class="iconfont icon-wenda">
+            </i>
+            讨论8888
+          </a>
+          <a href="/case/2017/">
+            <i class="iconfont icon-iconmingxinganli" style="top: 2px;">
+            </i>
+            案例
+          </a>
+          <a href="http://www.layui.com/">
+            <i class="iconfont icon-ui">
+            </i>
+            框架
+          </a>
+        </div>
+        <?php if(isset($_SESSION['uid'])){ ?>
+              <div class="nav-user">
+                <a class="avatar" href="{:U('home/user/index')}">
+                  <img src="__ROOT__/<?php echo $_SESSION['face'] ?>">
+                  <cite>
+                    <?php echo $_SESSION['nickname'] ?>
+                  </cite>
+                </a>
+                <div class="nav">
+                  <a href="{:U('home/set/index')}">
+                    <i class="iconfont icon-shezhi">
+                    </i>
+                    设置
+                  </a>
+                  <a href="{:U('home/login/logout')}">
+                    <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;">
+                    </i>
+                    退了
+                  </a>
+                </div>
+              </div>
+        <?php }else{ ?>
+              <div class="nav-user">
+                <a class="unlogin" href="/user/login/">
+                  <i class="iconfont icon-touxiang">
+                  </i>
+                </a>
+                <span>
+                  <a href="{:U('home/login/index')}">
+                    登入
+                  </a>
+                  <a href="{:U('home/reg/index')}">
+                    注册
+                  </a>
+                </span>
+                <p class="out-login">
+                  <a href="http://fly.layui.com/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+                  class="iconfont icon-qq" title="QQ登入">
+                  </a>
+                  <a href="http://fly.layui.com/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
+                  class="iconfont icon-weibo" title="微博登入">
+                  </a>
+                </p>
+              </div>
+        <?php } ?>
+        
+        
+      </div>
+    </div>
+
+    {__CONTENT__}
+
+    <div class="footer">
+      <p>
+        <a href="http://fly.layui.com/">
+          Fly社区
+        </a>
+        2017 &copy;
+        <a href="http://www.layui.com/">
+          layui.com
+        </a>
+      </p>
+      <p>
+        <a href="http://fly.layui.com/jie/3147.html" target="_blank">
+          产品授权
+        </a>
+        <a href="http://fly.layui.com/jie/8157.html" target="_blank">
+          获取Fly社区模版
+        </a>
+        <a href="http://fly.layui.com/jie/2461.html" target="_blank">
+          微信公众号
+        </a>
+      </p>
+    </div>
+  </body>
+
+</html>
