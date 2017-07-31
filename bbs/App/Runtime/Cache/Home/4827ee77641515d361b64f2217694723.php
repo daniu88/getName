@@ -176,15 +176,22 @@
                 <div class="layui-form-item">
                   <label for="L_username" class="layui-form-label">
                     昵称
+
                   </label>
                   <div class="layui-input-inline">
-                    <input type="text" id="L_username" name="username" required lay-verify="required"
+                    <input type="text" id="L_username" name="nickname" required lay-verify="required"
                     autocomplete="off" value="<?php echo $user['nickname'] ?>" class="layui-input">
                   </div>
                   <div class="layui-inline">
                     <div class="layui-input-inline">
-                      <input type="radio" name="sex" value="0" title="男">
+                      <?php  if($user['sex']=='男'){ ?>
+                      <input type="radio" name="sex" value="0" title="男" checked>
                       <input type="radio" name="sex" value="1" title="女">
+                    <?php  }else{ ?>
+                      <input type="radio" name="sex" value="0" title="男" >
+                      <input type="radio" name="sex" value="1" title="女" checked>
+                    <?php  } ?>
+                      
                     </div>
                   </div>
                 </div>
@@ -207,10 +214,11 @@
                   </div>
                 </div>
                 <div class="layui-form-item">
-                  <button class="layui-btn" key="set-mine" lay-filter="*" lay-submit>
+                  <button class="layui-btn" key="set-mine" lay-filter="edit" lay-submit>
                     确认修改
                   </button>
                 </div>
+              </form>
             </div>
             <div class="layui-form layui-form-pane layui-tab-item">
               <div class="layui-form-item">
@@ -251,7 +259,7 @@
                   </div>
                 </div>
                 <div class="layui-form-item">
-                  <button class="layui-btn" key="set-mine" lay-filter="*" lay-submit>
+                  <button class="layui-btn" key="set-mine" lay-filter="editpass" lay-submit>
                     确认修改
                   </button>
                 </div>
@@ -294,8 +302,29 @@
       var element = layui.element();
       
       //监听提交
-      form.on('submit(reg)', function(data){
+      form.on('submit(edit)', function(data){
+        $.ajax({
+          url: '<?php echo U('home/set/checkdata');?>',
+          type: 'POST',
+          dataType: 'json',
+          data: data.field,
+        })
+        .done(function(respones) {
+              if (respones.error==1) {
+              layer.msg(respones.info, function(){});
+              }else{
+              layer.alert(respones.info, {icon: 6},function(){
+              location.href="<?php echo U('home/login/index');?>";
+               });
 
+              };
+        })
+        .fail(function() {
+          
+        })
+
+        return false;
+        
 
       });
 

@@ -36,6 +36,29 @@
             框架
           </a>
         </div>
+        <?php if (isset($_SESSION['uid'])) { ?>
+
+          <div class="nav-user">
+            <a class="avatar" href="<?php echo U('home/user/index');?>">
+              <img src="/GetName/bbs/<?php echo $_SESSION['face'] ?>">
+              <cite>
+                <?php echo $_SESSION['nickname']; ?>
+              </cite>
+            </a>
+            <div class="nav">
+              <a href="<?php echo U('home/set/index');?>">
+                <i class="iconfont icon-shezhi">
+                </i>
+                设置
+              </a>
+              <a href="<?php echo U('home/login/logout');?>">
+                <i class="iconfont icon-tuichu" style="top: 0; font-size: 22px;">
+                </i>
+                退了
+              </a>
+            </div>
+          </div>
+       <?php }else{ ?>
         <div class="nav-user">
           <a class="unlogin" href="/user/login/">
             <i class="iconfont icon-touxiang">
@@ -58,6 +81,7 @@
             </a>
           </p>
         </div>
+        <?php } ?>
       </div>
     </div>
 
