@@ -146,7 +146,7 @@ window.onload=function(){
           </a>
         </li>
         <li class="layui-nav-item ">
-          <a href="/user/message/">
+          <a href="<?php echo U('home/news/index');?>">
             <i class="layui-icon">
               &#xe611;
             </i>
@@ -154,7 +154,7 @@ window.onload=function(){
           </a>
         </li>
         <li class="layui-nav-item ">
-          <a href="/auth/get/">
+          <a href="<?php echo U('home/clear/index');?>">
             <i class="layui-icon">
               &#xe61e;
             </i>

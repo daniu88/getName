@@ -98,7 +98,7 @@
         我的主页
       </a>
     </li>
-    <li class="layui-nav-item layui-this">
+    <li class="layui-nav-item ">
       <a href="<?php echo U('home/user/index');?>">
         <i class="layui-icon">
           
@@ -114,7 +114,7 @@
         基本设置
       </a>
     </li>
-    <li class="layui-nav-item ">
+    <li class="layui-nav-item layui-this">
       <a href="<?php echo U('home/news/index');?>">
         <i class="layui-icon">
           
@@ -130,7 +130,7 @@
         产品授权
       </a>
     </li>
-    <span class="layui-nav-bar" style="top: 212.5px; height: 0px; opacity: 0;">
+    <span class="layui-nav-bar" style="height: 0px; top: 212.5px; opacity: 0;">
     </span>
   </ul>
   <div class="site-tree-mobile layui-hide">
@@ -141,103 +141,25 @@
   <div class="site-mobile-shade">
   </div>
   <div class="fly-panel fly-panel-user" pad20="">
-    <div class="layui-tab layui-tab-brief" lay-filter="user" id="LAY_uc">
-      <div class="fly-msg">
-        您的邮箱尚未验证，这比较影响您的帐号安全，
-        <a href="/user/activate/">
-          立即去激活？
-        </a>
-      </div>
-      <ul class="layui-tab-title" id="LAY_mine">
-        <li data-type="mine-jie" lay-id="index" class="layui-this">
-          我发的帖（
-          <span>
-          <?php echo $num[0]['t1']; ?>
-          </span>
-          ）
-        </li>
-        <li data-type="collection" data-url="/collection/find/" lay-id="collection">
-          我收藏的帖（
-          <span>
-            0
-          </span>
-          ）
-        </li>
-      </ul>
-      <div class="layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
-        <div class="layui-tab-item layui-show">
-          <ul class="mine-view jie-row">
-            <div class="fly-msg">
-            <?php if ($Ucard) { ?>
-              
-             <?php  echo "没有相关数据"; ?>
-           <?php }else{ ?>
-           <?php foreach ($Ucarde as $carde) { ?>
-             <ul class="mine-view jie-row">
-                  <li>
-                    <a class="jie-title" href="/jie/12206/" target="_blank"><?php echo $carde['title']; ?></a>
-                    <i>2017/8/3 上午8:49:52</i>
-                    <a class="mine-edit" href="/jie/edit/12206">编辑</a>
-                    <em>1阅/0答</em>
-                  </li>
-              </ul>
-           <?php } ?>
-              
-
-         <?php  } ?>
-
-            </div>
-          </ul>
-          <div id="LAY_page">
-          </div>
-        </div>
-        <div class="layui-tab-item">
-          <ul class="mine-view jie-row">
-            <div class="fly-msg">
-              没有相关数据
-            </div>
-          </ul>
-          <div id="LAY_page1">
-          </div>
+    <div class="layui-tab layui-tab-brief" lay-filter="user" id="LAY_msg"
+    style="margin-top: 15px;">
+      <button class="layui-btn layui-btn-danger layui-hide" id="LAY_delallmsg">
+        清空全部消息
+      </button>
+      <div id="LAY_minemsg" style="margin-top: 10px;">
+        <div class="fly-none">
+          您暂时没有最新消息
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <script type="text/javascript">
-    layui.use(['form','jquery','element'], function(){
+  layui.use(['form','jquery','element'], function(){
       var form = layui.form();
       $ = layui.jquery;
       var element = layui.element();
         })
-      //监听提交
-      // form.on('submit(edit)', function(data){
-        // $.ajax({
-        //   url: '<?php echo U('home/set/edit');?>',
-        //   type: 'POST',
-        //   dataType: 'json',
-        //   data: data.field,
-        // })
-        // .done(function(respones) {
-        //       if (respones.error==1) {
-        //       layer.msg(respones.info, function(){});
-        //       }else{
-        //       layer.alert(respones.info, {icon: 6},function(){
-        //        location.reload();
-        //        });
-        //          console.log("error");
-        //       };
-        // })
-        // .fail(function() {
-          
-      
-
-        // return false;
-        
-
-      // });
-
 </script>
 
 
