@@ -117,12 +117,15 @@
      
       <div class="fly-panel detail-box" style="padding-top: 0;">
         <ul class="jieda photos" id="jieda">
-        <?php foreach ($answer as $row) { ?>
+
+        
+        <?php if ($answer) { ?>
+          <?php foreach ($answer as $row) { ?>
       
           <li data-id="42101">
             <a name="item-1501570234697"></a>
             <div class="detail-about detail-about-reply">
-              <a class="jie-user" href="/u/5892600/">
+              <a class="jie-user" href="<?php echo U('home/u/index',array('id'=>$row['uid']));?>">
 
 
                 <img src="/GetName/bbs/<?php echo $row['face']; ?>" alt="<?php echo $row['nickname']; ?>" layer-index="2">
@@ -143,6 +146,12 @@
             </div>
           </li>
             <?php } ?>
+        <?php }else{ ?>
+          <li class="fly-none">没有任何回答</li>
+          <?php } ?>
+
+        
+
         </ul>
         <div class="layui-form layui-form-pane">
           <form action="/jie/reply/" method="post">

@@ -88,50 +88,28 @@
 
 
 
-       <div class="main layui-clear">
+     <div class="main layui-clear">
   <div class="wrap">
-    <div class="content">
+    <div class="content" style="margin-right:0">
       <div class="fly-tab">
         <div class="layui-tab layui-tab-brief">
           <ul class="layui-tab-title">
+            <li>
+              <a href="/GetName/bbs">首页</a></li>
             <li class="layui-this">
-              <a href="<?php echo U('home/index/index');?>">
-                首页
-              </a>
-            </li>
+              <a href="/jie/">全部帖</a></li>
             <li>
-              <a href="<?php echo U('home/index/all');?>">
-                全部帖
-              </a>
-            </li>
+              <a href="/jie/unsolved/">未结帖</a></li>
             <li>
-              <a href="/jie/unsolved/">
-                未结帖
-              </a>
-            </li>
+              <a href="/jie/solved/">已采纳</a></li>
             <li>
-              <a href="<?php echo U('home/solved/index');?>">
-                已采纳
-              </a>
-            </li>
+              <a href="/jie/wonderful/">精华帖</a></li>
             <li>
-              <a href="<?php echo U('home/wonderful/index');?>">
-                精华帖
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo U('home/user/index');?>">
-                我的帖
-              </a>
-            </li>
+              <a href="/user/">我的帖</a></li>
           </ul>
         </div>
-        <i class="layui-icon fly-search">
-          
-        </i>
-      </div>
-      <ul class="fly-panel fly-list fly-list-top">
-        
+        <i class="layui-icon fly-search"></i></div>
+      <ul class="fly-panel fly-list">
         <?php foreach ($topQues as $row) { ?>
         <li class="fly-list-li">
           <a href="<?php echo U('home/u/index',array('id'=>$row['uid']));?>" class="fly-list-avatar">
@@ -170,12 +148,6 @@
           </p>
         </li>
       <?php  } ?>
-       
-       
-
-
-      </ul>
-      <ul class="fly-panel fly-list">
       
 
       <?php foreach ($question as $row) { ?>
@@ -216,117 +188,43 @@
       <?php } ?>
 
 
-      </ul>
-      <div style="text-align: center">
-        <div class="laypage-main">
-          <a href="<?php echo U('home/index/all',array(p=>'2'));?>" class="laypage-next">
-            更多求解
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="edge">
-    <div class="jie-add">
-      <a href="<?php echo U('home/jie/add');?>" class="layui-btn layui-btn-big">
-        发表新帖
-      </a>
-      <a href="javascript:layer.msg('尚未开放');" class="layui-btn layui-btn-big layui-btn-normal"
-      style="margin-left: 10px;">
-        共享组件
-      </a>
-    </div>
-    <div class="fly-panel leifeng-rank">
-      <h3 class="fly-panel-title">
-        回答月榜
-      </h3>
-      <dl>
-        <?php foreach ($hotuser as $row) { ?>
-          <dd>
-          <a href="<?php echo U('home/u/index',array('id'=>$row['uid']));?>">
-            <img src="/GetName/bbs/<?php echo $row['face']; ?>">
-            <cite>
-              <?php echo $row['nickname']; ?>
-            </cite>
-            <i>
-              <?php echo $row['answer_num']; ?>次回答
-            </i>
-          </a>
-        </dd>
-       <?php } ?>
-        
-      </dl>
-    </div>
-   
-   
-    <dl class="fly-panel fly-list-one">
-      <dt class="fly-panel-title">
-        近期热议
-      </dt>
 
-       <?php foreach ($hotQues as $res) { ?>
-      <dd>
-        <a href="<?php echo U('home/jie/index',array('id'=>$res['qid']));?>"><?php echo $res['title']; ?></a>
-        <span>
-          <i class="iconfont"></i><?php echo $res['answer_num']; ?></span>
-      </dd>
-      <?php } ?>
+
+
+
+        </ul>
+     
+      <style type="text/css">
+        .scc{
+          padding-top: 30px;
+          padding-bottom: 15px;
+        }
+        .scc a{
+          padding: 8px 20px;
+          border:1px solid #B5E61D;
+          margin: 2px;
+        }
+        
+        .scc .current{
+          background: #22B14C;
+          color: #fff;
+           padding: 10px 20px;
+          border:1px solid #B5E61D;
+          margin: 2px;
+        }
+
+
+
+
+      </style>  
+
+      <div class="scc" style="text-align: center">
+     
+          <?php echo $page; ?>
       
-    </dl>
-    <div class="fly-panel fly-link">
-      <h3 class="fly-panel-title">
-        友情链接
-      </h3>
-      <dl>
-        <dd>
-          <a href="http://layim.layui.com/" target="_blank">
-            WebIM
-          </a>
-        </dd>
-        <dd>
-        </dd>
-        <dd>
-          <a href="http://layer.layui.com/" target="_blank">
-            layer
-          </a>
-        </dd>
-        <dd>
-        </dd>
-        <dd>
-          <a href="http://www.bejson.com/" target="_blank">
-            JSON在线工具
-          </a>
-        </dd>
-        <dd>
-        </dd>
-        <dd>
-          <a href="http://www.smeoa.com/" target="_blank">
-            小微OA
-          </a>
-        </dd>
-        <dd>
-        </dd>
-        <dd>
-          <a href="http://www.fineui.com/" target="_blank">
-            FineUI开源控件
-          </a>
-        </dd>
-        <dd>
-        </dd>
-      </dl>
     </div>
   </div>
 </div>
-<script type="text/javascript">
-  layui.use(['form','jquery','element'], function(){
-      var form = layui.form();
-      $ = layui.jquery;
-      var element = layui.element();
-        })
-</script>
-
-
-
 
 
 

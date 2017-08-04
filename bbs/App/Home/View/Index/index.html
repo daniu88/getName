@@ -5,12 +5,12 @@
         <div class="layui-tab layui-tab-brief">
           <ul class="layui-tab-title">
             <li class="layui-this">
-              <a href="/">
+              <a href="{:U('home/index/index')}">
                 首页
               </a>
             </li>
             <li>
-              <a href="/jie/">
+              <a href="{:U('home/index/all')}">
                 全部帖
               </a>
             </li>
@@ -41,151 +41,103 @@
         </i>
       </div>
       <ul class="fly-panel fly-list fly-list-top">
+        
+        <?php foreach ($topQues as $row) { ?>
         <li class="fly-list-li">
-          <a href="/u/168" class="fly-list-avatar">
-            <img src="//cdn.layui.com/avatar/168.jpg?t=1490352249902" alt="贤心">
+          <a href="{:U('home/u/index',array('id'=>$row['uid']))}" class="fly-list-avatar">
+            <img src="__ROOT__/<?php echo $row['face']; ?>" alt="<?php echo $row['nickname']; ?>">
           </a>
           <h2 class="fly-tip">
-            <a href="/jie/12031/">
-              请勿将 layui 2.0 的新增组件提前挖出来公开分享
+            <a href="{:U('home/jie/index',array('id'=>$row['qid']))}">
+              <?php echo $row['title']; ?>
             </a>
-            <span class="fly-tip-stick">
-              置顶
-            </span>
+            
+             <?php if ($row['top']==1) {
+               echo '<span class="fly-tip-stick">置顶</span>';
+             }elseif ($row['top']==2) {
+               echo '<span class="fly-tip-jing">精华</span>';
+             } ?>
+            
           </h2>
           <p>
             <span>
-              <a href="/u/168">
-                贤心
+              <a href="{:U('home/u/index',array('id'=>$row['uid']))}">
+                <?php echo $row['nickname']; ?>
               </a>
             </span>
             <span>
-              4天前
+             <?php echo Ctime($row['create_time']); ?>
             </span>
             <span>
-              官方公告
+              <?php echo $row['cname']; ?>
             </span>
             <span class="fly-list-hint">
               <i class="iconfont" title="回答">
                 
               </i>
-              36
+              <?php echo $row['answer_num']; ?>
               <i class="iconfont" title="人气">
                 
               </i>
-              3042
+              <?php echo $row['view_num']; ?>
             </span>
           </p>
         </li>
-        <li class="fly-list-li">
-          <a href="/u/168" class="fly-list-avatar">
-            <img src="//cdn.layui.com/avatar/168.jpg?t=1490352249902" alt="贤心">
-          </a>
-          <h2 class="fly-tip">
-            <a href="/jie/11996/">
-              即日起，【案例】必须符合以下要求
-            </a>
-            <span class="fly-tip-stick">
-              置顶
-            </span>
-          </h2>
-          <p>
-            <span>
-              <a href="/u/168">
-                贤心
-              </a>
-            </span>
-            <span>
-              5天前
-            </span>
-            <span>
-              官方公告
-            </span>
-            <span class="fly-list-hint">
-              <i class="iconfont" title="回答">
-                
-              </i>
-              24
-              <i class="iconfont" title="人气">
-                
-              </i>
-              2377
-            </span>
-          </p>
-        </li>
+      <?php  } ?>
+       
+       
+
+
       </ul>
       <ul class="fly-panel fly-list">
+      
+
+      <?php foreach ($question as $row) { ?>
         <li class="fly-list-li">
-          <a href="/u/1355424" class="fly-list-avatar">
-            <img src="/avatar/1355424.gif" alt="笨小孩333">
+          <a href="{:U('home/u/index',array('id'=>$row['uid']))}" class="fly-list-avatar">
+            <img src="__ROOT__/<?php echo $row['face']; ?>" alt="<?php echo $row['nickname']; ?>">
           </a>
           <h2 class="fly-tip">
-            <a href="/jie/12126/">
-              问一个题外话，关于PHP post发送数据的问题，谢谢
+            <a href="{:U('home/jie/index',array('id'=>$row['qid']))}">
+              <?php echo $row['title']; ?>
             </a>
+            <?php if($row['top']==1){
+                            echo "<span class='fly-tip-stick'>置顶</span>";
+                        }elseif($row['top']==2){
+                            echo "<span class='fly-tip-jing'>精华</span>";
+                        } ?>
           </h2>
           <p>
             <span>
-              <a href="/u/1355424">
-                笨小孩333
+              <a href="{:U('home/u/index',array('id'=>$row['uid']))}">
+                <?php echo $row['nickname']; ?>
               </a>
             </span>
             <span>
-              8小时前
+              <?php echo Ctime($row['create_time']); ?>
             </span>
             <span>
-              技术闲谈
+              <?php echo $row['cname']; ?>
             </span>
             <span class="fly-list-hint">
               <i class="iconfont" title="回答">
                 
               </i>
-              1
+              <?php echo $row['answer_num']; ?>
               <i class="iconfont" title="人气">
                 
               </i>
-              31
+              <?php echo $row['view_num']; ?>
             </span>
           </p>
         </li>
-        <li class="fly-list-li">
-          <a href="/u/5385240" class="fly-list-avatar">
-            <img src="//q.qlogo.cn/qqapp/101235792/68174754F82E99604FA77AAEEC053DBA/100"
-            alt="灰太狼642">
-          </a>
-          <h2 class="fly-tip">
-            <a href="/jie/12125/">
-              用PHP如何接受这个登录信息？我的代码接受不到！
-            </a>
-          </h2>
-          <p>
-            <span>
-              <a href="/u/5385240">
-                灰太狼642
-              </a>
-            </span>
-            <span>
-              10小时前
-            </span>
-            <span>
-              layui
-            </span>
-            <span class="fly-list-hint">
-              <i class="iconfont" title="回答">
-                
-              </i>
-              5
-              <i class="iconfont" title="人气">
-                
-              </i>
-              48
-            </span>
-          </p>
-        </li>
+      <?php } ?>
+
+
       </ul>
       <div style="text-align: center">
         <div class="laypage-main">
-          <a href="/jie/page/2/" class="laypage-next">
+          <a href="{:U('home/index/all',array(p=>'2'))}" class="laypage-next">
             更多求解
           </a>
         </div>
@@ -207,17 +159,19 @@
         回答月榜
       </h3>
       <dl>
-        <dd>
-          <a href="/u/846384">
-            <img src="http://q.qlogo.cn/qqapp/101235792/877A59408D28490522A54BB9FD46CE9D/100">
+        <?php foreach ($hotuser as $row) { ?>
+          <dd>
+          <a href="{:U('home/u/index',array('id'=>$row['uid']))}">
+            <img src="__ROOT__/<?php echo $row['face']; ?>">
             <cite>
-              艾大叔是土匪
+              <?php echo $row['nickname']; ?>
             </cite>
             <i>
-              97次回答
+              <?php echo $row['answer_num']; ?>次回答
             </i>
           </a>
         </dd>
+       <?php } ?>
         
       </dl>
     </div>

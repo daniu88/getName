@@ -1,0 +1,145 @@
+<div class="main layui-clear">
+  <div class="wrap">
+    <div class="content" style="margin-right:0">
+      <div class="fly-tab">
+        <div class="layui-tab layui-tab-brief">
+          <ul class="layui-tab-title">
+            <li>
+              <a href="__ROOT__">首页</a></li>
+            <li class="layui-this">
+              <a href="/jie/">全部帖</a></li>
+            <li>
+              <a href="/jie/unsolved/">未结帖</a></li>
+            <li>
+              <a href="/jie/solved/">已采纳</a></li>
+            <li>
+              <a href="/jie/wonderful/">精华帖</a></li>
+            <li>
+              <a href="/user/">我的帖</a></li>
+          </ul>
+        </div>
+        <i class="layui-icon fly-search"></i></div>
+      <ul class="fly-panel fly-list">
+        <?php foreach ($topQues as $row) { ?>
+        <li class="fly-list-li">
+          <a href="{:U('home/u/index',array('id'=>$row['uid']))}" class="fly-list-avatar">
+            <img src="__ROOT__/<?php echo $row['face']; ?>" alt="<?php echo $row['nickname']; ?>">
+          </a>
+          <h2 class="fly-tip">
+            <a href="{:U('home/jie/index',array('id'=>$row['qid']))}">
+              <?php echo $row['title']; ?>
+            </a>
+            
+             <?php if ($row['top']==1) {
+               echo '<span class="fly-tip-stick">置顶</span>';
+             }elseif ($row['top']==2) {
+               echo '<span class="fly-tip-jing">精华</span>';
+             } ?>
+            
+          </h2>
+          <p>
+            <span>
+              <a href="{:U('home/u/index',array('id'=>$row['uid']))}">
+                <?php echo $row['nickname']; ?>
+              </a>
+            </span>
+            <span>
+             <?php echo Ctime($row['create_time']); ?>
+            </span>
+            <span>
+              <?php echo $row['cname']; ?>
+            </span>
+            <span class="fly-list-hint">
+              <i class="iconfont" title="回答">
+                
+              </i>
+              <?php echo $row['answer_num']; ?>
+              <i class="iconfont" title="人气">
+                
+              </i>
+              <?php echo $row['view_num']; ?>
+            </span>
+          </p>
+        </li>
+      <?php  } ?>
+      
+
+      <?php foreach ($question as $row) { ?>
+        <li class="fly-list-li">
+          <a href="{:U('home/u/index',array('id'=>$row['uid']))}" class="fly-list-avatar">
+            <img src="__ROOT__/<?php echo $row['face']; ?>" alt="<?php echo $row['nickname']; ?>">
+          </a>
+          <h2 class="fly-tip">
+            <a href="{:U('home/jie/index',array('id'=>$row['qid']))}">
+              <?php echo $row['title']; ?>
+            </a>
+            <?php if($row['top']==1){
+                            echo "<span class='fly-tip-stick'>置顶</span>";
+                        }elseif($row['top']==2){
+                            echo "<span class='fly-tip-jing'>精华</span>";
+                        } ?>
+          </h2>
+          <p>
+            <span>
+              <a href="{:U('home/u/index',array('id'=>$row['uid']))}">
+                <?php echo $row['nickname']; ?>
+              </a>
+            </span>
+            <span>
+              <?php echo Ctime($row['create_time']); ?>
+            </span>
+            <span>
+              <?php echo $row['cname']; ?>
+            </span>
+            <span class="fly-list-hint">
+              <i class="iconfont" title="回答">
+                
+              </i>
+              <?php echo $row['answer_num']; ?>
+              <i class="iconfont" title="人气">
+                
+              </i>
+              <?php echo $row['view_num']; ?>
+            </span>
+          </p>
+        </li>
+      <?php } ?>
+
+
+
+
+
+
+        </ul>
+     
+      <style type="text/css">
+        .scc{
+          padding-top: 30px;
+          padding-bottom: 15px;
+        }
+        .scc a{
+          padding: 8px 20px;
+          border:1px solid #B5E61D;
+          margin: 2px;
+        }
+        
+        .scc .current{
+          background: #22B14C;
+          color: #fff;
+           padding: 10px 20px;
+          border:1px solid #B5E61D;
+          margin: 2px;
+        }
+
+
+
+
+      </style>  
+
+      <div class="scc" style="text-align: center">
+     
+          <?php echo $page; ?>
+      
+    </div>
+  </div>
+</div>

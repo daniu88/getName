@@ -17,7 +17,7 @@ class JieController extends Controller {
         $huida = "select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='{$qid}'";
         // var_dump($huida);
     	$answer = M()->query($huida);
-        
+
         $this->assign('answer',$answer);
         // var_dump($answer );
 
@@ -114,13 +114,14 @@ class JieController extends Controller {
         $data = I('post.');
         $data['uid'] = $_SESSION['uid'];
         $data['create_time']=time();
-        $hid = M('answer')->add($data);
+        // $hid = M('answer')->add($data);
 
 
-       $this->ajaxReturn(['error'=>0,'info'=>'评论成功','url'=>U('home/jie/index',array('id'=>$qid))]);
-
-
-
+        if(M('answer')->add($data)){
+            $this->ajaxReturn(['error'=>0,'info'=>'评论成功']);
+        }else{
+            $this->ajaxReturn(['error'=>1,'info'=>'发布失败']);
+        }
 
 
     }
