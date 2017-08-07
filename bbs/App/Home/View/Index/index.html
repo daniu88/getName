@@ -15,30 +15,65 @@
               </a>
             </li>
             <li>
-              <a href="/jie/unsolved/">
+              <a href="{:U('home/index/unsolved')}">
                 未结帖
               </a>
             </li>
             <li>
-              <a href="{:U('home/solved/index')}">
+              <a href="{:U('home/index/solved')}">
                 已采纳
               </a>
             </li>
             <li>
-              <a href="{:U('home/wonderful/index')}">
+              <a href="{:U('home/index/wonderful')}">
                 精华帖
               </a>
             </li>
-            <li>
-              <a href="{:U('home/user/index')}">
-                我的帖
-              </a>
-            </li>
+            <?php if ($_SESSION['uid']) { ?>
+              <li>
+                <a href="{:U('home/u/index',array('id'=>$_SESSION['uid']))}">我的帖</a>
+              </li>
+            <?php  } ?>
           </ul>
         </div>
-        <i class="layui-icon fly-search">
-          
-        </i>
+        <style type="text/css">
+          form{
+            margin-top: 11px;
+            margin-right: 8px;
+            position: absolute;
+            top:0;
+            right: 0;
+          }
+          .layui-tab{
+            position: relative;
+
+          }
+          form .layui-input{
+            height:30px;
+            border-radius:8px  25px  25px 8px;
+
+          }
+          form .layui-input:hover{
+            border-color:  #30A89D;
+          }
+          .layui-icon{
+            height:30px;
+            width: 70px;
+            border-radius:25px 25px 25px 25px;
+            outline:medium;
+            line-height: 36px;
+          }
+          .layui-icon:hover{
+
+            background: #199F93;
+            color: #fff;
+          }
+
+        </style>
+        <form action="{:U('home/search/index')} " method="get" >
+          <input type="text" name="q"  lay-verify="required" placeholder="输入搜搜看" autocomplete="off" class="layui-input">
+          <input class="layui-icon fly-search layui-btn-primary" type="submit" value="">
+        </form>  
       </div>
       <ul class="fly-panel fly-list fly-list-top">
         

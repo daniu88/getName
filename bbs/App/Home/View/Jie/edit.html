@@ -1,0 +1,124 @@
+<div class="main layui-clear">
+  <div class="fly-panel" pad20 style="padding-top: 5px;">
+    <div class="layui-form-pane">
+      <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+          <li class="layui-this">发表新帖</li></ul>
+        <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+          <div class="layui-tab-item layui-show">
+            <form action="" method="post">
+              <div class="layui-form-item">
+                <label for="L_title" class="layui-form-label">标题</label>
+                <div class="layui-input-block">
+                  <input type="text" id="L_title" name="title" value=" <?php echo $edit[0]['title']; ?> " required lay-verify="xbstitle" autocomplete="off" class="layui-input"></div>
+              </div>
+              <div class="layui-form-item layui-form-text">
+                <div class="layui-input-block">
+                  <input type="hidden" name="qid" value="<?php echo $_GET['id'] ?>">
+                  <textarea id="L_content" name="content"  required  placeholder="请输入内容" class="layui-textarea fly-editor" style="height: 260px;"><?php echo $edit[0]['content']; ?></textarea>
+                </div>
+                <label for="L_content" class="layui-form-label" style="top: -2px;">描述</label></div>
+              <div class="layui-form-item">
+                <div class="layui-inline">
+                  <label class="layui-form-label">所在类别</label>
+                  <div class="layui-input-block">
+                    <select lay-verify="required" name="cid">
+                      <option></option>
+
+                      <?php foreach ($category as $father) { ?>
+                      
+                      <optgroup label="<?php echo $father['cname'] ?>">
+                          <?php foreach ($father['son'] as $son) { ?>
+                              <option value="<?php echo $son['cid'] ?>"><?php echo $son['cname'] ?></option>
+                          <?php } ?>
+                      </optgroup>
+
+                      <?php } ?>
+
+                        
+                    </select>
+                  </div>
+                </div>
+                <div class="layui-inline">
+                  <label class="layui-form-label">悬赏飞吻</label>
+                  <div class="layui-input-block">
+                    <select name="kiss">
+                      <option value="5">5</option>
+                      <option value="20">20</option>
+                      <option value="50">50</option>
+                      <option value="100">100</option></select>
+                  </div>
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label for="L_vercode" class="layui-form-label">人类验证</label>
+                <div class="layui-input-inline">
+                  <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input"></div>
+                <div class="layui-form-mid">
+                  <span style="color: #c00;"><?php echo $question ?></span></div>
+              </div>
+              <div class="layui-form-item">
+                <button class="layui-btn" lay-filter="add" lay-submit>立即发布</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    layui.use(['form','jquery','layedit'], function(){
+      var form = layui.form();
+      $ = layui.jquery;
+      var layedit = layui.layedit;
+
+      layedit.set({
+        uploadImage: {
+          url: '{:U('home/jie/upload')}' //接口url
+          ,type: '' //默认post
+        }
+      });
+
+      index = layedit.build('L_content'); //建立编辑器
+
+      //自定义验证规则
+      form.verify({
+        xbstitle: function(value){
+          if(value.length < 5){
+            return '标题至少得5个字符啊';
+          }
+        }
+      });
+      
+      //监听提交
+      form.on('submit(add)', function(data){
+       
+        data.field.content = layedit.getContent(index);
+        // // layer.msg(JSON.stringify(data.field));
+
+        $.ajax({
+          url: '{:U('home/jie/ajaxedit')}',
+          type: 'POST',
+          dataType: 'json',
+          data: data.field,
+        })
+        .done(function(res) {
+           if(res.error==1){
+              layer.msg(res.info,function(){});
+           }else{
+              layer.alert(res.info, {icon: 6},function(){
+                  location.href=res.url;
+              });
+           }
+        })
+        .fail(function() {
+          console.log("error");
+        })
+
+        return false; 
+
+      });
+
+    });
+  </script>
+    

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
-      登入 - Fly社区
+      <?php echo $title; ?> - <?php echo C("SITE_NAME"); ?>
     </title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
     <link rel="stylesheet" href="/GetName/bbs/Public/layui/css/layui.css">
@@ -20,7 +20,7 @@
           Fly社区
         </a>
         <div class="nav">
-          <a href="/jie/">
+          <a href="<?php echo U('home/index/all');?>">
             <i class="iconfont icon-wenda">
             </i>
             讨论
@@ -84,7 +84,7 @@
         <?php } ?>
       </div>
     </div>
-
+<?php ?>
 
 
 
@@ -108,7 +108,12 @@
           </a>
           <div class="detail-hits" id="LAY_jieAdmin" data-id="12151">
             <span style="color:#FF7200">悬赏：<?php echo $question['kiss']; ?>飞吻</span>
-            <span class="layui-btn layui-btn-mini jie-admin " type="collect" data-type="add">收藏</span></div>
+
+            
+            <span id="shou" class="layui-btn layui-btn-mini jie-admin " type="collect" data-type="add">收藏</span>
+
+
+          </div>
         </div>
         <div class="detail-body photos">
           <?php echo htmlspecialchars_decode($question['content']); ?>
@@ -187,54 +192,72 @@
 
 <script type="text/javascript">
       layui.use(['form','jquery','layedit'], function(){
-      var form = layui.form();
-      $ = layui.jquery;
-      var layedit = layui.layedit;
+            var form = layui.form();
+            $ = layui.jquery;
+            var layedit = layui.layedit;
 
-      layedit.set({
-        uploadImage: {
-          url: '<?php echo U('home/jie/ping');?>' //接口url
-          ,type: '' //默认post
-        }
-      });
+            layedit.set({
+              uploadImage: {
+                url: '<?php echo U('home/jie/ping');?>' //接口url
+                ,type: '' //默认post
+              }
+            });
 
-      index = layedit.build('L_content'); //建立编辑器
+            index = layedit.build('L_content'); //建立编辑器
 
-      
-      
-      //监听提交
-      form.on('submit(add)', function(data){
-       
-        data.field.content = layedit.getContent(index);
-        if(data.field.content.length<10){
-            layer.msg("内容必须大于10个字符",function(){});
-        }
-        // // // layer.msg(JSON.stringify(data.field));
+            
+            
+            //监听提交
+            form.on('submit(add)', function(data){
+             
+              data.field.content = layedit.getContent(index);
+              if(data.field.content.length<10){
+                  layer.msg("内容必须大于10个字符",function(){});
+              }
+              // // // layer.msg(JSON.stringify(data.field));
 
-        $.ajax({
-          url: '<?php echo U('home/jie/reply');?>',
-          type: 'POST',
-          dataType: 'json',
-          data: data.field,
-        })
-        .done(function(res) {
-           if(res.error==1){
-              layer.msg(res.info,function(){});
-           }else{
-              layer.alert(res.info, {icon: 6},function(){
-                  location.reload();
-              });
-           }
-        })
-        .fail(function() {
-          console.log("error");
-        })
+              $.ajax({
+                url: '<?php echo U('home/jie/reply');?>',
+                type: 'POST',
+                dataType: 'json',
+                data: data.field,
+              })
+              .done(function(res) {
+                 if(res.error==1){
+                    layer.msg(res.info,function(){});
+                 }else{
+                    layer.alert(res.info, {icon: 6},function(){
+                        location.reload();
+                    });
+                 }
+              })
+              .fail(function() {
+                console.log("error");
+              })
 
-        return false; 
+              return false; 
 
-      });
+            });
 
+
+        $("#shou").click(function(){
+            var yRgb ="#fff";
+            var rgb = $(this).css('background-color'); 
+            if(rgb!=yRgb ){
+                $(this).css('background-color',yRgb ); 
+            }else{
+            $(this).css('background-color',red); 
+            }
+          
+
+
+
+
+
+
+          });
     });
+
 </script>
 
 

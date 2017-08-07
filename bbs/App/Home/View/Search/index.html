@@ -1,0 +1,85 @@
+<style type="text/css">
+	.biaoti{
+		width: 70%;
+		height: 40px;
+		/*background: green;*/
+		margin: 0 auto;
+		line-height: 45px;
+		border-bottom: 1px solid #E2E2E2;
+
+	}
+	.layui-input{
+		width: 43.5%;
+		/*margin: 0 auto;*/
+		height: 40px;
+	}
+	.layui-btn-primary{
+		height: 40px;
+		width: 80px;
+		float: right;
+		position: absolute;
+		top: 0px;
+		left: 37.5%;
+	}
+	.kuang{
+		width: 70%;
+		margin: 0 auto;
+		position: relative;
+
+	}
+	.leirou{
+		width: 70%;
+		/*border: 1px solid #fff;*/
+		height: 100px;
+		/*display: none;*/
+		text-overflow:ellipsis;
+		overflow:hidden;
+		white-space:nowrap;
+		/*width:360px;*/
+		margin:20px auto 0  auto;
+		/*background: #fff;*/
+		
+	}
+	.leirou h2{
+		font-size: 20px;
+		
+	}
+	.leirou h2 a{
+		color: #001BA0;
+	}
+	.leirou h2 a:hover{
+		text-decoration:underline
+
+	}
+	.b_attribution{
+		color: green;
+	}
+	.layui-icon{
+		line-height: 47px;
+		font-size: 25px;
+	}
+</style>
+<div >
+	<form  action="{:U('home/search/index')} " method="get">
+		<div class="kuang">
+			<input type="text" name="q" lay-verify="required" placeholder="输入搜搜看" autocomplete="off" class="layui-input">
+			<input class="layui-icon layui-btn layui-btn-radius layui-btn-primary" type="submit" value="&#xe615;">
+		</div>
+		<div class="biaoti">
+			<h1>&nbsp;&nbsp;有关<strong><span style="color:red;"><?php echo $words; ?></span> </strong> 的全部帖子</h1>   
+
+		</div> 
+	</form>
+	<?php foreach ($question as $row) { ?>
+		<div class="leirou">
+		<h2>
+			<a target="_blank" href="{:U('home/jie/index',array('id'=>$row['qid']))}"><?php echo $row['title']; ?>
+			</a>
+		</h2>
+		<p>
+			<?php echo htmlspecialchars_decode($row['content']); ?>
+		</p>
+	</div>
+<?php	} ?>
+	
+</div>

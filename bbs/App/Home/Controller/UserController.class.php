@@ -1,7 +1,7 @@
 <?php 
 namespace Home\Controller;
 use Think\Controller;
-class UserController extends Controller {
+class UserController extends CommonController {
 		public function index(){
 		
 			
@@ -16,18 +16,20 @@ class UserController extends Controller {
 	    	$Ucard = M()->query($data);
 
 	    	$num = M()->query($res);
-	    	// var_dump($data);
 	    	$num = M()->query($res);
+	    	$this->assign('title',"用户中心");
 	    	$this->assign('num',$num);
 	        $this->assign('Ucard',$Ucard );
 			$this->display();
 
+		}
 
-
-
-
-
-
+		public function collection()
+		{
+			$res = $_SESSION['uid'];
+			var_dump($res);
+			// $this->assign('res',$res);
+			$this->display('index');
 
 		}
 

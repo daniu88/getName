@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class JieController extends Controller {
+class JieController extends CommonController{
     public function index(){
 
 
@@ -28,6 +28,7 @@ class JieController extends Controller {
     	// var_dump($question);
     	// var_dump($sql);
     	$this->assign('question',current($question));
+        $this->assign('title',current($question)['title']);
         $this->display();
     }
 
@@ -54,7 +55,7 @@ class JieController extends Controller {
 
 
     	$this->assign("category",$tempArr);
-
+        $this->assign('title',"发布新帖");
     	$this->assign("question",$question);
     	$this->display();
     }
@@ -155,6 +156,73 @@ class JieController extends Controller {
                 
         }
     }
+
+   public function edit()
+    {
+        //验证码
+        $question = D("vercode")->getOne();
+        // 分类
+        $category = M('category')->select();
+        $tempArr=array();
+        foreach ($category as $row) {
+            if ($row['fid']==0) {
+                $tempArr[]=$row;
+            }
+        }
+        foreach ($category as $key => $father) {
+            foreach ($category as $son) {
+                if ($son['fid']==$father['cid']) {
+                    $tempArr[$key]['son'][]=$son;
+                }
+            }
+        }
+
+       $qid=I('get.id');
+      
+
+        $sql = "select * from  question where qid = ".$qid;
+        $sql = M('question')->query($sql);
+         // var_dump($sql);
+        $this->assign('edit',$sql);
+
+
+
+
+
+        $this->assign("category",$tempArr);
+        $this->assign('title',"编辑帖子");
+        $this->assign("question",$question);
+        $this->display();
+    }
+
+    public function ajaxedit()
+    {
+        //接编辑的内容
+        $data = I('post.');
+        // var_dump($data);exit();
+        $res=D('vercode')->checkCode($data['vercode']);
+
+        if (!$res) {
+            $this->ajaxReturn(['error'=>1,"info"=>"人类验证不通过！"]);
+        }
+
+        $data['create_time']=time();
+        $qid = M('question')->save($data);
+        
+        $this->ajaxReturn(['error'=>0,'info'=>'发布成功','url'=>U('home/jie/index',array('id'=>$data['qid']))]);
+    }
+
+
+    public function keep()
+    {
+        
+    }
+
+
+
+
+
+
 
 }
 

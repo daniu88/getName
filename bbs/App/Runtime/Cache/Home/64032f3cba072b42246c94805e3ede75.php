@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
-      登入 - Fly社区
+      <?php echo $title; ?> - <?php echo C("SITE_NAME"); ?>
     </title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
     <link rel="stylesheet" href="/GetName/bbs/Public/layui/css/layui.css">
@@ -20,7 +20,7 @@
           Fly社区
         </a>
         <div class="nav">
-          <a href="/jie/">
+          <a href="<?php echo U('home/index/all');?>">
             <i class="iconfont icon-wenda">
             </i>
             讨论
@@ -84,7 +84,7 @@
         <?php } ?>
       </div>
     </div>
-
+<?php ?>
 
 
 
@@ -176,7 +176,7 @@
                 <li>
                    <a class="jie-title" href="<?php echo U('home/jie/index',array('id'=>$carde['qid']));?>" target="_blank"><?php echo $carde['title']; ?></a>
                     <i><?php echo Ctime($carde['create_time']); ?></i>
-                    <a class="mine-edit" href="/jie/edit/12206">编辑</a>
+                    <a class="mine-edit" href="<?php echo U('home/jie/edit',array('id'=>$carde['qid']));?>">编辑</a>
                     <em><?php echo $carde['view_num']; ?>/<?php echo $carde['answer_num']; ?></em>
                 </li>
             <?php } ?>  
@@ -189,10 +189,21 @@
         </div>
         <div class="layui-tab-item">
           <ul class="mine-view jie-row">
+
             <div class="fly-msg">
               没有相关数据
             </div>
-          </ul>
+       
+
+        <li>
+          <a class="jie-title" href="/jie/12273/" target="_blank">铁证！做开发真的不好做女朋友</a>
+          <i>收藏于刚刚</i>
+        </li>
+
+
+
+
+      </ul>
           <div id="LAY_page1">
           </div>
         </div>

@@ -1,11 +1,12 @@
 <?php 
 namespace Home\Controller;
 use Think\Controller;
-class SetController extends Controller {
+class SetController extends CommonController {
 		public function index(){
 			$uid = $_SESSION['uid'];
 	    	$user = M('user')->find($uid);
 	    	//模板赋值
+	    	$this->assign('title',$user['nickname']."的基本资料设置");
 	    	$this->assign('user',$user);
 			$this->display();
 		}
@@ -85,6 +86,10 @@ class SetController extends Controller {
 			    }
 		}
 
+		public function sendmail()
+		{
+			youjian('208056573@qq.com',"测试邮件","hello,这是一封测试邮件啊啊啊啊啊  啊啊啊啊啊");
+		}
 
 
 

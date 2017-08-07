@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
-      登入 - Fly社区
+      <?php echo $title; ?> - <?php echo C("SITE_NAME"); ?>
     </title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
     <link rel="stylesheet" href="/GetName/bbs/Public/layui/css/layui.css">
@@ -20,7 +20,7 @@
           Fly社区
         </a>
         <div class="nav">
-          <a href="/jie/">
+          <a href="<?php echo U('home/index/all');?>">
             <i class="iconfont icon-wenda">
             </i>
             讨论
@@ -84,31 +84,37 @@
         <?php } ?>
       </div>
     </div>
-
+<?php ?>
 
 
 
      <div class="main layui-clear">
-  <div class="wrap">
+  <div >
     <div class="content" style="margin-right:0">
       <div class="fly-tab">
         <div class="layui-tab layui-tab-brief">
           <ul class="layui-tab-title">
             <li>
               <a href="/GetName/bbs">首页</a></li>
-            <li class="layui-this">
-              <a href="/jie/">全部帖</a></li>
-            <li>
-              <a href="/jie/unsolved/">未结帖</a></li>
-            <li>
-              <a href="/jie/solved/">已采纳</a></li>
-            <li>
-              <a href="/jie/wonderful/">精华帖</a></li>
-            <li>
-              <a href="/user/">我的帖</a></li>
+            <li class="<?php if(ACTION_NAME=="all"){ echo 'layui-this';} ?>">
+              <a href="<?php echo U('home/index/all');?>">全部帖</a></li>
+            <li class="<?php if(ACTION_NAME=="unsolved"){ echo 'layui-this';} ?>">
+              <a href="<?php echo U('home/index/unsolved');?>">未结帖</a></li>
+            <li class="<?php if(ACTION_NAME=="solved"){ echo 'layui-this';} ?>">
+              <a href="<?php echo U('home/index/solved');?>">已采纳</a></li>
+            <li class="<?php if(ACTION_NAME=="wonderful"){ echo 'layui-this';} ?>">
+              <a href="<?php echo U('home/index/wonderful');?>">精华帖</a></li>
+              
+            <?php if ($_SESSION['uid']) { ?>
+              <li>
+                <a href="<?php echo U('home/u/index',array('id'=>$_SESSION['uid']));?>">我的帖</a>
+              </li>
+            <?php  } ?>
+            
           </ul>
         </div>
-        <i class="layui-icon fly-search"></i></div>
+        <i class="layui-icon fly-search"></i>
+      </div>
       <ul class="fly-panel fly-list">
         <?php foreach ($topQues as $row) { ?>
         <li class="fly-list-li">

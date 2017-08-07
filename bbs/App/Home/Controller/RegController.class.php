@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class RegController extends Controller {
+class RegController extends CommonController{
     public function index(){
 
         if (isset($_SESSION['uid'])) {
@@ -9,6 +9,7 @@ class RegController extends Controller {
         }
 
     	$question = D("vercode")->getOne();
+        $this->assign('title',"注册");
     	$this->assign("question",$question);
 
     	$this->display();
@@ -31,7 +32,7 @@ class RegController extends Controller {
 			$data['create_time'] = time();
 			$data['password'] = md5($data['password']);
 
-            $faces = ['Public/images/face.jpg','Public/images/face1.jpg','Public/images/face2.jpg'];
+            $faces = ['Public/images/face1.jpg','Public/images/face.jpg','Public/images/face2.jpg'];
 
             $data['face'] = $faces[array_rand($faces)];
 

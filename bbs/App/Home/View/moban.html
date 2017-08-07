@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
-      登入 - Fly社区
+      <?php echo $title; ?> - <?php echo C("SITE_NAME"); ?>
     </title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
     <link rel="stylesheet" href="__PUBLIC__/layui/css/layui.css">
@@ -20,7 +20,7 @@
           Fly社区
         </a>
         <div class="nav">
-          <a href="/jie/">
+          <a href="{:U('home/index/all')}">
             <i class="iconfont icon-wenda">
             </i>
             讨论
@@ -84,7 +84,7 @@
         <?php } ?>
       </div>
     </div>
-
+<?php //var_dump(ACTION_NAME) ?>
 
 
 

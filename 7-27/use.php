@@ -1,15 +1,29 @@
 <?php 
 
+$('.collect').click(function(){
+     that=$(this);
+     //alert(that.children('i').children('.zan').val());
+     //return false;
+     $.ajax({
+       url: '{:U("home/discuss/collect")}',
+       type: 'POST',
+       dataType: 'json',
+       data: {qid:that.children('.qid').val()}
+     })
+     .done(function(respones) {
+       if(respones.error==0){
+          that.hide();
+          that.siblings('.collect').show();
+       }else{
+          that.hide();
+          that.siblings('.collect').show();
+       }
+     })
+     .fail(function() {
+       console.log("error");
+     })
+  })
 
-include '1.php';
-include '2.php';
-
-// use a\abc;
-// $obj = new a\abc\A();
-
-use a\abc\a;
-$obj=new A();
-$obj->abc();
 
 
 

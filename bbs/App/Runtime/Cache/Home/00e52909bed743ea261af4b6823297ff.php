@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>
-      登入 - Fly社区
+      <?php echo $title; ?> - <?php echo C("SITE_NAME"); ?>
     </title>
     <link rel="stylesheet" href="//at.alicdn.com/t/font_mqhl04idhqx8byb9.css">
     <link rel="stylesheet" href="/GetName/bbs/Public/layui/css/layui.css">
@@ -20,7 +20,7 @@
           Fly社区
         </a>
         <div class="nav">
-          <a href="/jie/">
+          <a href="<?php echo U('home/index/all');?>">
             <i class="iconfont icon-wenda">
             </i>
             讨论
@@ -84,7 +84,7 @@
         <?php } ?>
       </div>
     </div>
-
+<?php ?>
 
 
 
@@ -105,30 +105,65 @@
               </a>
             </li>
             <li>
-              <a href="/jie/unsolved/">
+              <a href="<?php echo U('home/index/unsolved');?>">
                 未结帖
               </a>
             </li>
             <li>
-              <a href="<?php echo U('home/solved/index');?>">
+              <a href="<?php echo U('home/index/solved');?>">
                 已采纳
               </a>
             </li>
             <li>
-              <a href="<?php echo U('home/wonderful/index');?>">
+              <a href="<?php echo U('home/index/wonderful');?>">
                 精华帖
               </a>
             </li>
-            <li>
-              <a href="<?php echo U('home/user/index');?>">
-                我的帖
-              </a>
-            </li>
+            <?php if ($_SESSION['uid']) { ?>
+              <li>
+                <a href="<?php echo U('home/u/index',array('id'=>$_SESSION['uid']));?>">我的帖</a>
+              </li>
+            <?php  } ?>
           </ul>
         </div>
-        <i class="layui-icon fly-search">
-          
-        </i>
+        <style type="text/css">
+          form{
+            margin-top: 11px;
+            margin-right: 8px;
+            position: absolute;
+            top:0;
+            right: 0;
+          }
+          .layui-tab{
+            position: relative;
+
+          }
+          form .layui-input{
+            height:30px;
+            border-radius:8px  25px  25px 8px;
+
+          }
+          form .layui-input:hover{
+            border-color:  #30A89D;
+          }
+          .layui-icon{
+            height:30px;
+            width: 70px;
+            border-radius:25px 25px 25px 25px;
+            outline:medium;
+            line-height: 36px;
+          }
+          .layui-icon:hover{
+
+            background: #199F93;
+            color: #fff;
+          }
+
+        </style>
+        <form action="<?php echo U('home/search/index');?> " method="get" >
+          <input type="text" name="q"  lay-verify="required" placeholder="输入搜搜看" autocomplete="off" class="layui-input">
+          <input class="layui-icon fly-search layui-btn-primary" type="submit" value="">
+        </form>  
       </div>
       <ul class="fly-panel fly-list fly-list-top">
         

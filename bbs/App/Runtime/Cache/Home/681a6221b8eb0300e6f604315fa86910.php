@@ -16,11 +16,11 @@
   <body>
     <div class="header">
       <div class="main">
-        <a class="logo" href="/GetName/bbs" title="Fly">
+        <a class="logo" href="<?php echo U('home/index/index');?>" title="Fly">
           Fly社区
         </a>
         <div class="nav">
-          <a href="/jie/">
+          <a href="<?php echo U('home/index/all');?>">
             <i class="iconfont icon-wenda">
             </i>
             讨论
@@ -84,7 +84,7 @@
         <?php } ?>
       </div>
     </div>
-
+<?php ?>
 
 
 
