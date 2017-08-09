@@ -101,7 +101,7 @@
               <i class="iconfont" title="回答"></i><?php echo $question['answer_num']; ?></a>
             <i class="iconfont" title="人气"></i><?php echo $question['view_num']; ?></div></div>
         <div class="detail-about">
-          <a class="jie-user" href="/u/5892600/">
+          <a class="jie-user" href="<?php echo U('home/u/index',array('id'=>$question['uid']));?>">
             <img src="/GetName/bbs/<?php echo $question['face']; ?>" alt="<?php echo $question['nickname']; ?>">
             <cite><?php echo $question['nickname']; ?>
               <em><?php echo Ctime($question['create_time']); ?></em></cite>
@@ -109,8 +109,12 @@
           <div class="detail-hits" id="LAY_jieAdmin" data-id="12151">
             <span style="color:#FF7200">悬赏：<?php echo $question['kiss']; ?>飞吻</span>
 
-            
-            <span id="shou" class="layui-btn layui-btn-mini jie-admin " type="collect" data-type="add">收藏</span>
+           
+            <?php if($keep){ ?>
+                 <span id="shou" class="layui-btn layui-btn-mini jie-admin layui-btn-danger" qid="<?php echo $question['qid'] ?>" type="collect" data-type="add">取消收藏</span>
+            <?php }else{ ?>
+                <span id="shou" class="layui-btn layui-btn-mini jie-admin " qid="<?php echo $question['qid'] ?>" type="collect" data-type="add">收藏</span>
+            <?php } ?>
 
 
           </div>
@@ -143,9 +147,10 @@
             </div>
             <div class="detail-body jieda-body"><?php echo htmlspecialchars_decode($row['content']); ?></div>
             <div class="jieda-reply">
-              <span class="jieda-zan " type="zan">
+              <span class="jieda-zan zan <?php  if ($row['is_zan']) { echo 'zanok'; }?> " type="zan" aid=<?php echo $row['aid']; ?> >
                 <i class="iconfont icon-zan"></i>
-                <em>0</em></span>
+                <em><?php echo $row['zan_num']; ?></em>
+              </span>
               <span type="reply">
                 <i class="iconfont icon-svgmoban53"></i>回复</span>
             </div>
@@ -239,24 +244,62 @@
 
             });
 
+           $('#shou').click(function(event) {
+             
+             qid = $(this).attr('qid');
+             that = $(this);
+             $.ajax({
+               url: '<?php echo U('home/jie/keep');?>',
+               type: 'post',
+               dataType: 'json',
+               data: {qid: qid},
+             })
+             .done(function(res) {
+               if (res.error==0) {
+                that.removeClass('layui-btn-danger');
+                that.text('收藏');
+               }else{
+                that.addClass('layui-btn-danger');
+                that.text('取消收藏');
+               };
+             })
+             .fail(function() {
+               
+             })
+           });
 
-        $("#shou").click(function(){
-            var yRgb ="#fff";
-            var rgb = $(this).css('background-color'); 
-            if(rgb!=yRgb ){
-                $(this).css('background-color',yRgb ); 
-            }else{
-            $(this).css('background-color',red); 
-            }
-          
+           $('.jieda-zan').click(function(event) {
+             aid = $(this).attr('aid');
+             that = $(this);
+             $.ajax({
+               url: '<?php echo U('home/jie/zan');?>',
+               type: 'post',
+               dataType: 'json',
+               data: {aid: aid},
+             })
+             .done(function(res) {
+               if (res.error==0) {
+                num = parseInt(that.children('em').text())+1;
+                that.children('em').text(num);
+                that.addClass('zanok');
+               }else{
+                num = parseInt(that.children('em').text())-1;
+                that.children('em').text(num);
+                that.removeClass('zanok');
+                
+               };
+             })
+             .fail(function() {
+               
+             })
+           });
 
 
 
 
-
-
-          });
     });
+
+
 
 </script>
 

@@ -1,0 +1,6 @@
+[ 2017-08-08T15:50:35+08:00 ] 127.0.0.1 /GetName/bbs/index.php/adminx/login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+ERR: 无法加载模块:Adminx
+

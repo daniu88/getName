@@ -37,9 +37,9 @@ class RegController extends CommonController{
             $data['face'] = $faces[array_rand($faces)];
 
 			if(M('user')->add($data)){
-				$this->ajaxReturn(['error'=>0,'info'=>"注册成功"]);
+				$this->ajaxReturn(['error'=>0,'info'=>"添加成功"]);
 			}else{
-				$this->ajaxReturn(['error'=>1,'info'=>"注册失败"]);
+				$this->ajaxReturn(['error'=>1,'info'=>"添加失败"]);
 			}
 		}
     }

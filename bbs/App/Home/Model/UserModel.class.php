@@ -13,7 +13,7 @@ class UserModel extends Model{
    	array('nickname','','昵称已经存在！',1,'unique',1),
 
    	array('repassword','password','确认密码不正确',0,'confirm',1),
-   	array('password',"/^[A-z0-9]{6,8}$/",'密码长度不条例',1,'regex',1),
+   	array('password',"/^[A-z0-9]{6,8}$/",'密码长度不条例',0,'regex',1),
 
       array('email','require','邮箱码必须',1,'',2),
       array('email','email','邮箱格式不正确！',1,'',2),
@@ -22,7 +22,7 @@ class UserModel extends Model{
       array('nickname','require','昵称必须！',1,'',2),
 
       array('repassword','password','确认密码不正确',0,'confirm',3),
-      array('password',"/^[A-z0-9]{6,8}$/",'密码长度不条例',1,'regex',3),
+      array('password',"/^[A-z0-9]{6,8}$/",'密码长度不条例',0,'regex',3),
          
    );
 }
