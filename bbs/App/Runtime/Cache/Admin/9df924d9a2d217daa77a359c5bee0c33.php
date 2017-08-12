@@ -62,7 +62,7 @@
                                 </dd>
                                 <dd class="">
                                     <dd class="">
-                                        <a href="javascript:;" _href="./question-del.html">
+                                        <a href="javascript:;" _href="<?php echo U('admin/question/dele');?>">
                                             <cite>删除问题</cite>
                                         </a>
                                     </dd>

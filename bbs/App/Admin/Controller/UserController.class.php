@@ -4,7 +4,11 @@ use Think\Controller;
 class UserController extends Controller {
     public function index(){
     	$user = M('user')->select();
-    	$this->assign('user',$user);
+
+        $tot = "select count('id') tot from user";
+        $tot = M()->query($tot);
+        $this->assign('tot',$tot);
+    	$this->assign('user',$user);   
         $this->display();
     }
 
@@ -45,4 +49,37 @@ class UserController extends Controller {
             }
         }
     }
+
+
+    public function status()
+    {
+        $uid = I('post.uid');
+        $user = M('user')->find($uid);
+
+        if ($user['status']==0) {
+
+           M('user')->where(['uid'=>$uid])->save(['status'=>'1']); 
+           $this->ajaxReturn(['error'=>0,'info'=>"已停用"]);
+        }else{
+           M('user')->where(['uid'=>$uid])->save(['status'=>'0']); 
+           $this->ajaxReturn(['error'=>1,'info'=>"已启用"]); 
+        }
+    }
+
+    public function dele()
+    {
+        $qid = I('post.qid');
+        $question = M('question')->where(['qid'=>$qid])->find();
+
+        if ($question['dele']==0) {
+
+            M('question')->where(['qid'=>$qid])->save(['dele'=>'1']);
+           
+            $this->ajaxReturn(['error'=>0,'info'=>"问题已隐藏",'url'=>U('admin/question/editl',array('id'=>$row['qid']))]);
+        };
+
+    }
+
+
+
 }

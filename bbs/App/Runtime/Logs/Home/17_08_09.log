@@ -3324,3 +3324,16 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
 
+[ 2017-08-09T21:19:09+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/zan.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `zan` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `zan` WHERE `aid` = 39 AND `uid` = 46  [ RunTime:0.0012s ]
+SQL: INSERT INTO `zan` (`aid`,`uid`) VALUES ('39','46') [ RunTime:0.0286s ]
+SQL: SHOW COLUMNS FROM `answer` [ RunTime:0.0521s ]
+SQL: UPDATE `answer` SET `zan_num`=zan_num+1 WHERE `aid` = 39 [ RunTime:0.0213s ]
+

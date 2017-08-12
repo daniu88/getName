@@ -28,12 +28,15 @@ class LoginController extends CommonController {
 		$email = $data['email'];
 		$password = md5($data['password']);
 
-		$res=M("user")->where(['email'=>$email,'password'=>$password])->select(); 
+		$res=M("user")->where(['email'=>$email,'password'=>$password])->find(); 
 
 		if ($res) {
-			$_SESSION['uid']=current($res)['uid'];
-			$_SESSION['nickname']=current($res)['nickname'];
-			$_SESSION['face']=current($res)['face'];
+			if ($res['status']) {
+				$this->ajaxReturn(['error'=>1,'info'=>"账号被封停，请联系管理员开通"]);
+			}
+			$_SESSION['uid']=$res['uid'];
+			$_SESSION['nickname']=$res['nickname'];
+			$_SESSION['face']=$res['face'];
 			$this->ajaxReturn(['error'=>0,'info'=>"登录成功"]);
 		}else{
 			$this->ajaxReturn(['error'=>1,'info'=>"邮箱或者密码不正确"]);

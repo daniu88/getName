@@ -27,7 +27,7 @@
                   </div>
                 </div> 
             </form>
-            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="member_add('添加用户','{:U('admin/user/add')}','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
+            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="member_add('添加用户','{:U('admin/user/add')}','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据： <?php echo $tot[0]['tot']; ?>  条</span></xblock>
             <table class="layui-table">
                 <thead>
                     <tr>
@@ -93,13 +93,25 @@
                             <?php echo Ctime($row['create_time']); ?>
                         </td>
                         <td class="td-status">
-                            <span class="layui-btn layui-btn-normal layui-btn-mini">
-                                已启用
+                            <span class="layui-btn  layui-btn-mini <?php if ($row['status']){
+                                echo "layui-btn-disabled";
+                            }else{
+                                echo "layui-btn-normal";
+                                    }?> ">
+                                <?php if ($row['status']) {
+                                    echo "已停用";
+                                }else{
+                                    echo "已启用";
+                                    } ?>
                             </span>
                         </td>
                         <td class="td-manage">
-                            <a style="text-decoration:none" onclick="member_stop(this,'10001')" href="javascript:;" title="停用">
-                                <i class="layui-icon">&#xe601;</i>
+                            <a msg="确认要停用吗" class="status" style="text-decoration:none" onclick="member_stop(this,'10001')" href="javascript:;" title="停用" uid="<?php echo $row['uid']; ?> ">
+                                <?php if ($row['status']) { ?>
+                                   <i class="layui-icon">   </i>
+                                <?php }else{ ?>
+                                    <i class="layui-icon">&#xe601;</i>
+                                   <?php } ?> 
                             </a>
                             <a title="编辑" href="javascript:;" onclick="member_edit('编辑','{:U('admin/edit/index',array('uid'=>$row['uid']))}','4','','510')"
                             class="ml-5" style="text-decoration:none">
@@ -130,6 +142,40 @@
               layer = layui.layer;//弹出层
 
               //以上模块根据需要引入
+              $('.status').click(function(event) {
+                  that = $(this);
+                  msg = $(this).attr('msg');
+
+                  layer.confirm(msg,function(index){
+
+                    uid = that.attr('uid');
+
+                    $.ajax({
+                        url: '{:U('admin/user/status')}',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {uid:uid},
+                    })
+                    .done(function(res) {
+                        if (res.error==0) {
+                            layer.msg('已停用!',{icon: 5,time:1000});
+                            that.html('<i class="layui-icon">&#xe62f;</i>');
+
+                            that.parent().siblings('.td-status').children('span').addClass('layui-btn-disabled').removeClass('layui-btn-normal').text("已停用");
+
+                            that.attr('msg','你确定要启用吗');
+
+                        }else{
+                            layer.msg('已启用!',{icon: 6,time:1000});
+                            that.html('<i class="layui-icon">&#xe601;</i>');
+
+                            that.parent().siblings('.td-status').children('span').addClass('layui-btn-normal').removeClass('layui-btn-disabled').text("已启用");
+                        };
+                    })
+                    
+                  })
+
+              });
 
               laypage({
                 cont: 'page'

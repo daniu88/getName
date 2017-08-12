@@ -27,7 +27,7 @@
                   </div>
                 </div> 
             </form>
-            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="question_add('添加问题','question-add.html','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
+            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="question_add('添加问题','question-add.html','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据： <?php echo count($question); ?>   条</span></xblock>
             <table class="layui-table">
                 <thead>
                     <tr>
@@ -67,15 +67,17 @@
                             <?php echo $row['qid']; ?>
                         </td>
                         <td>
-                            <u style="cursor:pointer" onclick="question_show()">
-                            <?php echo $row['title']; ?>
-                            </u>
+                            <a href="{:U('home/jie/index',array('id'=>$row['qid']))}" target="_blank">
+                              <u style="cursor:pointer" onclick="question_show()">
+                              <?php echo $row['title'];  ?>
+                              </u>
+                            </a>
                         </td>
                         <td >
-                            <?php echo $row['qid']; ?>
+                            <?php echo $row['cname']; ?>
                         </td>
                         <td >
-                            xuebingsi
+                            <?php echo $row['nickname']; ?>
                         </td>
                         <td >
                             <?php echo Ctime($row['create_time']); ?>
@@ -84,11 +86,11 @@
                             <?php echo $row['view_num']; ?>
                         </td>
                         <td class="td-manage">
-                            <a title="编辑" href="javascript:;" onclick="question_edit('编辑','question-edit.html','4','','510')"
+                            <a title="编辑" href="javascript:;" onclick="question_edit('编辑','{:U('admin/question/editl',array('id'=>$row['qid']))}','4','','510')"
                             class="ml-5" style="text-decoration:none">
                                 <i class="layui-icon">&#xe642;</i>
                             </a>
-                            <a title="删除" href="javascript:;" onclick="question_del(this,'1')" 
+                            <a class="dele" title="删除" href="javascript:;" onclick="question_del(this,<?php echo $row['qid'] ?>)" 
                             style="text-decoration:none">
                                 <i class="layui-icon">&#xe640;</i>
                             </a>
@@ -156,6 +158,8 @@
              }
 
              function question_show (argument) {
+
+
                 layer.msg('可以跳到前台具体问题页面',{icon:1,time:1000});
              }
              /*添加*/
@@ -168,11 +172,32 @@
             }
 
             /*删除*/
-            function question_del(obj,id){
+            function question_del(obj,id){ //点击执行删除的方法
+              
                 layer.confirm('确认要删除吗？',function(index){
                     //发异步删除数据
-                    $(obj).parents("tr").remove();
-                    layer.msg('已删除!',{icon:1,time:1000});
+                    // uid = $(this).attr('uid');
+
+                    $.ajax({
+                      url: '{:U('admin/question/delel')}',
+                      type: 'post',
+                      dataType: 'json',
+                      data: {qid: id},
+                    })
+                    .done(function(res) {
+                      if (res.error==0) {
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000},);
+
+                        }else{
+
+                        $(obj).parents("tr").remove();
+                        layer.msg('显示正常!',{icon:1,time:1000},);
+                        };
+                    })
+              
+
+                    
                 });
             }
             </script>

@@ -23,6 +23,9 @@ class UserModel extends Model{
 
       array('repassword','password','确认密码不正确',0,'confirm',3),
       array('password',"/^[A-z0-9]{5,8}$/",'密码长度不条例',0,'regex',3),
+
+
+
          
    );
 }
