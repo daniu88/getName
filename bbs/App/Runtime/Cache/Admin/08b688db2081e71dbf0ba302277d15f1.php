@@ -48,12 +48,12 @@
                   </div>
                 </div> 
             </form>
-            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
+            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><span class="x-right" style="line-height:40px">共有数据：<?php echo Count($question); ?>   条</span></xblock>
             <table class="layui-table">
                 <thead>
                     <tr>
                         <th>
-                            <input type="checkbox" name="" value="">
+                            <input id="all" type="checkbox" name="" value="">
                         </th>
                         <th>
                             ID
@@ -82,15 +82,17 @@
                     <?php foreach ($question as $row) { ?>
                         <tr>
                         <td>
-                            <input type="checkbox" value="1" name="">
+                            <input class="son" type="checkbox" value="<?php echo $row['qid'];?>" name="">
                         </td>
                         <td>
                             <?php echo $row['qid']; ?>
                         </td>
                         <td>
-                            <u style="cursor:pointer" onclick="question_show()">
-                                <?php echo $row['title']; ?>
-                            </u>
+                            <a href="<?php echo U('home/jie/index',array('id'=>$row['qid']));?>" target="_blank">
+                                <u style="cursor:pointer" onclick="question_show()">
+                                    <?php echo $row['title']; ?>
+                                </u>
+                            </a>
                         </td>
                         <td >
                             <?php echo $row['cname']; ?>
@@ -127,15 +129,17 @@
               laypage = layui.laypage;//分页
               layer = layui.layer;//弹出层
 
-              //以上模块根据需要引入
-              laypage({
-                cont: 'page'
-                ,pages: 100
-                ,first: 1
-                ,last: 100
-                ,prev: '<em><</em>'
-                ,next: '<em>></em>'
-              }); 
+
+
+                $('#all').click(function(event) {
+                    if ($(this).prop("checked")) {
+                        $('.son').prop("checked",true);
+                    }else{
+                        $('.son').prop("checked",false);
+                    };
+                 });
+
+
               
               var start = {
                 min: laydate.now()
@@ -170,12 +174,42 @@
              function delAll () {
                 layer.confirm('确认要删除吗？',function(index){
                     //捉到所有被选中的，发异步进行删除
-                    layer.msg('删除成功', {icon: 1});
+                    
+                    uids = '';
+
+                    for (var i = 0; i < $('.son:checked').length; i++) {
+                        uids+=$('.son:checked').eq(i).val();
+                        uids+=',';
+                    };
+                    
+                    $.ajax({
+                        url: '<?php echo U('admin/question/deleAll');?>',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {uids: uids},
+                    })
+                    .done(function(res) {
+                        if (res.error==0) {
+                            $('.son:checked').parents('tr').remove();
+                            layer.msg('删除成功', {icon: 1});
+                            // var index = parent.layer.getFrameIndex(window.name);
+                            // parent.layer.close(index);
+                            // parent.location.reload();
+                        };
+                    })
+
+                    
                 });
              }
 
+          
+
+
+ 
+
+
              function question_show (argument) {
-                layer.msg('可以跳到前台具体问题页面',{icon:1,time:1000});
+                // layer.msg('可以跳到前台具体问题页面',{icon:1,time:1000});
              }
             
             /*恢复*/
@@ -221,7 +255,7 @@
                             layer.msg('已删除!',{icon:1,time:1000});
                        };
 
-                   })
+                   });
 
                     
                 });

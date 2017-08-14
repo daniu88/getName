@@ -112,7 +112,32 @@ class QuestionController extends Controller {
         };
     }
 
+    public function deleAll()
+    {
+        $uids = I('post.uids');
+        $uids = rtrim($uids,',');
+        // $sql = "delete form question where uid in(".$uids.")";
+        M('question')->delete($uids);
+        $this->ajaxReturn(['error'=>0,'info'=>"批量删除成功"]);
+    }
 
+    public function deleAll3()
+    {
+        $uids = I('post.uids');
+        $uids = rtrim($uids,',');
+        $sql = "update question set dele='1' where qid in($uids)";
 
+        // var_dump($sql);exit();
+        M()->execute($sql);
+        
+        $this->ajaxReturn(['error'=>0,'info'=>"批量删除成功"]);
+    }
+
+    public function category()
+    {
+        $this->display('category');
+    }
 
 }
+
+

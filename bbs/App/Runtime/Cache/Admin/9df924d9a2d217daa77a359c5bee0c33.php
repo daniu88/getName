@@ -78,7 +78,7 @@
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
-                                    <a href="javascript:;" _href="./category.html">
+                                    <a href="javascript:;" _href="<?php echo U('admin/question/category');?>">
                                         <cite>分类列表</cite>
                                     </a>
                                 </dd>
@@ -112,7 +112,7 @@
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="./member-del.html">
+                                    <a href="javascript:;" _href="<?php echo U('admin/user/del');?>">
                                         <cite>删除会员</cite>
                                     </a>
                                 </dd>
@@ -144,22 +144,22 @@
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
-                                    <a href="javascript:;" _href="./admin-list.html">
+                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_list');?>">
                                         <cite>管理员列表</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="./admin-role.html">
+                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_role');?>">
                                         <cite>角色管理</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="./admin-cate.html">
+                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_cate');?>">
                                         <cite>权限分类</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="./admin-rule.html">
+                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_rule');?>">
                                         <cite>权限管理</cite>
                                     </a>
                                 </dd>

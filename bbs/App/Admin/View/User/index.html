@@ -32,7 +32,7 @@
                 <thead>
                     <tr>
                         <th>
-                            <input type="checkbox" name="" value="">
+                            <input id="all" type="checkbox" name="" value="">
                         </th>
                         <th>
                             ID
@@ -67,10 +67,10 @@
                     <?php foreach ($user as $row) { ?>
                         <tr>
                         <td>
-                            <input type="checkbox" value="1" name="">
+                            <input class="son" type="checkbox" value="<?php echo $row['uid']; ?>" name="">
                         </td>
                         <td>
-                            1
+                            <?php echo $row['uid']; ?>
                         </td>
                         <td>
                             <u style="cursor:pointer"  onclick="member_show('<?php echo $row['nickname']; ?>','{:U('admin/user/Member',array('uid'=>$row['uid']))}','10001','360','400')">
@@ -141,6 +141,20 @@
               laypage = layui.laypage;//分页
               layer = layui.layer;//弹出层
 
+
+              $('#all').click(function(event) {
+                    if ($(this).prop("checked")) {
+                        $('.son').prop("checked",true);
+                    }else{
+                        $('.son').prop("checked",false);
+                    };
+                 });
+
+
+
+
+
+
               //以上模块根据需要引入
               $('.status').click(function(event) {
                   that = $(this);
@@ -177,14 +191,6 @@
 
               });
 
-              laypage({
-                cont: 'page'
-                ,pages: 100
-                ,first: 1
-                ,last: 100
-                ,prev: '<em><</em>'
-                ,next: '<em>></em>'
-              }); 
               
               var start = {
                 min: laydate.now()
@@ -208,6 +214,7 @@
               document.getElementById('LAY_demorange_s').onclick = function(){
                 start.elem = this;
                 laydate(start);
+                
               }
               document.getElementById('LAY_demorange_e').onclick = function(){
                 end.elem = this
@@ -220,6 +227,34 @@
              function delAll () {
                 layer.confirm('确认要删除吗？',function(index){
                     //捉到所有被选中的，发异步进行删除
+                    uids = '';
+
+                    for (var i = 0; i < $('.son:checked').length; i++) {
+                        uids+=$('.son:checked').eq(i).val();
+                        uids+=',';
+                    };
+                    
+                    $.ajax({
+                        url: '{:U('admin/user/deleAll')}',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {uids: uids},
+                    })
+                    .done(function(res) {
+                        if (res.error==0) {
+                            parent.location.reload();
+                            // $('.son:checked').parents('tr').remove();
+                            layer.msg('删除成功', {icon: 1});
+                        //     // var index = parent.layer.getFrameIndex(window.name);
+                        //     // parent.layer.close(index);
+                        //     // parent.location.reload();
+                        };
+                    })
+
+
+
+
+
                     layer.msg('删除成功', {icon: 1});
                 });
              }

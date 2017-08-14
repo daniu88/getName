@@ -66,20 +66,69 @@ class UserController extends Controller {
         }
     }
 
+    public function deleAll()
+    {
+        $uids = I('post.uids');
+        $uids = rtrim($uids,',');
+        $sql = "update user set status='1' where uid in($uids)";
+
+        // var_dump($sql);exit();
+        M()->execute($sql);
+        $this->ajaxReturn(['error'=>0,'info'=>"批量删除成功"]);
+    }
+
+
+
+
+    public function del()
+    {
+        $del = M('user')->where(['status'=>'1'])->select();
+
+        $this->assign('del',$del);
+        $this->display('del');
+    }
+
     public function dele()
     {
-        $qid = I('post.qid');
-        $question = M('question')->where(['qid'=>$qid])->find();
+        $uid = I('post.uid');
 
-        if ($question['dele']==0) {
+        $user = M('user')->find($uid);
 
-            M('question')->where(['qid'=>$qid])->save(['dele'=>'1']);
-           
-            $this->ajaxReturn(['error'=>0,'info'=>"问题已隐藏",'url'=>U('admin/question/editl',array('id'=>$row['qid']))]);
-        };
+        if ($user['status']==1) {
+
+           M('user')->where(['uid'=>$uid])->save(['status'=>'0']); 
+           $this->ajaxReturn(['error'=>0,'info'=>"已启用"]);
+        }
+
 
     }
 
+
+
+
+
+    public function admin_list()//管理员列表
+    {
+        $this->display('admin_list');
+    }
+
+    public function admin_role()//角色管理
+    {
+        $this->display('admin_role');
+    }
+
+    public function admin_cate()//权限分类
+    {
+        $this->display('admin_cate');
+    }
+
+
+    public function admin_rule()//权限管理
+    {
+
+
+        $this->display('admin_rule');
+    }
 
 
 }

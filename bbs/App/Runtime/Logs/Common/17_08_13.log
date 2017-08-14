@@ -1,0 +1,6 @@
+[ 2017-08-13T17:21:11+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/images/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+ERR: 无法加载模块:Public
+

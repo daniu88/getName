@@ -1,0 +1,934 @@
+[ 2017-08-13T15:17:24+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000138s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009132s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0433s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0196s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0175s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0013s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0403s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0081s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000401s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000774s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077141s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005636s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005801s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003829s ]
+
+[ 2017-08-13T17:09:36+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0090s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0116s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0006s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014900s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2017-08-13T17:09:49+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.1514s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0267s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2017-08-13T17:10:41+08:00 ] 127.0.0.1 /GetName/bbs/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0082s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2017-08-13T17:12:53+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0070s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0086s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000806s ]
+
+[ 2017-08-13T17:13:22+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0073s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0072s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2017-08-13T17:13:54+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0062s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000371s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000453s ]
+
+[ 2017-08-13T17:13:58+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0079s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001299s ]
+
+[ 2017-08-13T17:20:59+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0071s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0080s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2017-08-13T17:21:19+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+
+[ 2017-08-13T17:21:22+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0125s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-08-13T17:21:36+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `user` WHERE `email` = '112@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0347s ]
+
+[ 2017-08-13T17:22:28+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+
+[ 2017-08-13T17:22:31+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001342s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0072s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000358s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000449s ]
+
+[ 2017-08-13T17:22:52+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `user` WHERE `email` = '158@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-08-13T17:22:54+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/set/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 33 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000440s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2017-08-13T17:22:56+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0079s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0078s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2017-08-13T17:22:58+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0075s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000488s ]
+NOTIC: [8] Undefined index: son D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042689s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001774s ]
+
+[ 2017-08-13T17:23:44+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/ajaxadd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0079s ]
+SQL: INSERT INTO `question` (`title`,`content`,`cid`,`kiss`,`uid`,`create_time`) VALUES ('这五年，习近平引领中国在国际舞台办了这些大事','&lt;p style=&quot;text-align: justify;&quot;&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;/p&gt;','4','5','33','1502616223') [ RunTime:0.1239s ]
+
+[ 2017-08-13T17:23:46+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index/id/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0079s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 46 [ RunTime:0.0378s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='46' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0336s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 46 AND `uid` = 33 LIMIT 1   [ RunTime:0.0006s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='46' [ RunTime:0.0021s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000576s ]
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055293s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001034s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002237s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002825s ]
+
+[ 2017-08-13T17:23:49+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0478s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0076s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2017-08-13T17:23:51+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0071s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined index: son D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2017-08-13T17:24:08+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/ajaxadd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0084s ]
+SQL: INSERT INTO `question` (`title`,`content`,`cid`,`kiss`,`uid`,`create_time`) VALUES ('积极参与联合国维和、开展国际人道主义救援。','&lt;p style=&quot;text-align: justify;&quot;&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;span&gt;“中国追求的是共同发展。我们既要让自己过得好,也要让别人过得好。”习近平用这句话生动概括了当前国际形势下，中国对世界秩序的构想与主张。&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这五年，中国这个世界第二大经济体，在他的倡议和理念引领下，走到了世界舞台中央，办了不少大事，引发国际社会广泛关注和积极评价，获得许多国家积极响应和支持。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;strong&gt;一、为全球治理贡献中国智慧，用大国担当“实力圈粉”&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在西方传统的国际治理话语中，充斥着各种“陷阱”：“修昔底德陷阱”鼓吹零和博弈，“金德尔伯格陷阱”渲染全球秩序真空，“中等收入陷阱”被用作唱衰新兴经济体……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;这些“陷阱”虚实如何，能否避开？习近平提出一系列新理念应对：以合作共赢为核心的新型国际关系；共同、综合、合作、可持续的新安全观；人类命运共同体理念……&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;行胜于言。习近平曾多次强调：“一分部署，九分落实，中国说过的话一定算数。”较之以前，中国这五年提供了越来越多带有“中国烙印”的公共产品，在国际舞台上“实力圈粉”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;中国宣布建立200亿元人民币的“中国气候变化南南合作基金”，设立总额为10亿美元的中国—联合国和平与发展基金。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;在美国宣布要退出气候变化《巴黎协定》时，中国郑重承诺将“坚定不移地做全球气候治理进程的维护者和推动者”。&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;积极参与联合国维和、开展国际人道主义救援。索马里护航、尼泊尔地震救援、也门撤侨等一系列重大事件，中国冲在一线、表现优异，赢得世界尊敬。&lt;/p&gt;','6','5','33','1502616247') [ RunTime:0.0979s ]
+
+[ 2017-08-13T17:24:09+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index/id/47.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0073s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 47 [ RunTime:0.0451s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='47' [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 47 AND `uid` = 33 LIMIT 1   [ RunTime:0.0008s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='47' [ RunTime:0.0008s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000987s ]
+
+[ 2017-08-13T17:24:11+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0089s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0083s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2017-08-13T17:24:13+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0081s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0073s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2017-08-13T17:24:27+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/search/index.html?q=dda
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+NOTIC: [2048] Redefining already defined constructor for class PSCWS4 D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\pscws4.class.php 第 120 行.
+NOTIC: [2048] Redefining already defined constructor for class XDB_R D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\xdb_r.class.php 第 34 行.
+SQL: select * from question where  title like '%dda%' [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2017-08-13T17:26:40+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/search/index.html?q=%E4%B9%A0%E8%BF%91%E5%B9%B3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+NOTIC: [2048] Redefining already defined constructor for class PSCWS4 D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\pscws4.class.php 第 120 行.
+NOTIC: [2048] Redefining already defined constructor for class XDB_R D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\xdb_r.class.php 第 34 行.
+SQL: select * from question where  title like '%习近平%' [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000389s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002731s ]
+
+[ 2017-08-13T17:26:43+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index/id/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0069s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 46 [ RunTime:0.0714s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='46' [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 46 AND `uid` = 33 LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='46' [ RunTime:0.0003s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2017-08-13T21:08:03+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0063s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+NOTIC: [8] Undefined index: son D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059787s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059919s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2017-08-13T21:12:22+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index/id/47.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0376s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 47 [ RunTime:0.1446s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='47' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 47 AND `uid` = 33 LIMIT 1   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='47' [ RunTime:0.0004s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000381s ]
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.160261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.160406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000795s ]
+
+[ 2017-08-13T21:27:58+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001937s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0327s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined index: son D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.115567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001067s ]
+
+[ 2017-08-13T21:38:34+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0081s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `category`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined index: son D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 120 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\511d38b02bcb5d4d2e2645932334ef0f.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010131s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+

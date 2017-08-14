@@ -19,17 +19,17 @@
         <script src="/GetName/bbs/Public/admin/js/x-admin.js"></script>
         <script src="/GetName/bbs/Public/admin/js/x-layui.js"></script>
     </head>
-      <body>
+        <body>
         <div class="x-nav">
             <span class="layui-breadcrumb">
               <a><cite>首页</cite></a>
               <a><cite>会员管理</cite></a>
-              <a><cite>问题/资讯列表</cite></a>
+              <a><cite>会员删除</cite></a>
             </span>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
         <div class="x-body">
-            <form class="layui-form x-center" action="" style="width:800px">
+            <form class="layui-form x-center" action="" style="width:80%">
                 <div class="layui-form-pane" style="margin-top: 15px;">
                   <div class="layui-form-item">
                     <label class="layui-form-label">日期范围</label>
@@ -40,7 +40,7 @@
                       <input class="layui-input" placeholder="截止日" id="LAY_demorange_e">
                     </div>
                     <div class="layui-input-inline">
-                      <input type="text" name="username"  placeholder="标题" autocomplete="off" class="layui-input">
+                      <input type="text" name="username"  placeholder="请输入用户名" autocomplete="off" class="layui-input">
                     </div>
                     <div class="layui-input-inline" style="width:80px">
                         <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
@@ -48,30 +48,36 @@
                   </div>
                 </div> 
             </form>
-            <xblock><button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button><button class="layui-btn" onclick="question_add('添加问题','<?php echo U('home/jie/add');?>','600','500')"><i class="layui-icon">&#xe608;</i>添加</button><span class="x-right" style="line-height:40px">共有数据： <?php echo count($question); ?>   条</span></xblock>
+            <xblock><button class="layui-btn layui-btn-danger" onclick="recoverAll()"><i class="layui-icon">&#xe640;</i>批量恢复</button><span class="x-right" style="line-height:40px">共有数据：88 条</span></xblock>
             <table class="layui-table">
                 <thead>
                     <tr>
                         <th>
-                            <input id="all" type="checkbox" name="" value="">
+                            <input type="checkbox" name="" value="">
                         </th>
                         <th>
                             ID
                         </th>
                         <th>
-                            标题
+                            用户名
                         </th>
                         <th>
-                            分类
+                            性别
                         </th>
                         <th>
-                            来源
+                            积分
                         </th>
                         <th>
-                            更新时间
+                            邮箱
                         </th>
                         <th>
-                            浏览次数
+                            地址
+                        </th>
+                        <th>
+                            加入时间
+                        </th>
+                        <th>
+                            状态
                         </th>
                         <th>
                             操作
@@ -79,45 +85,51 @@
                     </tr>
                 </thead>
                 <tbody>
-                   <?php foreach ($question as $row) { ?>
-                       <tr>
+                    <?php foreach ($del as $key) { ?>
+                        <tr>
                         <td>
-                            <input class="son" type="checkbox" value="<?php echo $row['qid']; ?>" name="">
-                        </td>
-                        <td>
-                            <?php echo $row['qid']; ?>
+                            <input type="checkbox" value="1" name="">
                         </td>
                         <td>
-                            <a href="<?php echo U('home/jie/index',array('id'=>$row['qid']));?>" target="_blank">
-                              <u style="cursor:pointer" onclick="question_show()">
-                              <?php echo $row['title']; ?>
-                              </u>
-                            </a>
+                            <?php echo $key['uid']; ?>
+                        </td>
+                        <td>
+                            <u style="cursor:pointer" onclick="member_show('张三','member-show.html','10001','360','400')">
+                               <?php echo $key['nickname']; ?>
+                            </u>
                         </td>
                         <td >
-                            <?php echo $row['cname']; ?>
+                            <?php echo $key['sex']; ?>
                         </td>
                         <td >
-                            <?php echo $row['nickname']; ?>
+                            <?php echo $key['kiss']; ?>
                         </td>
                         <td >
-                            <?php echo Ctime($row['create_time']); ?>
+                            <?php echo $key['email']; ?>
                         </td>
                         <td >
-                            <?php echo $row['view_num']; ?>
+                            <?php echo $key['city']; ?>
+                        </td>
+                        <td>
+                            <?php echo Ctime($key['create_time']); ?>
+                        </td>
+                        <td class="td-status">
+                            <span class="layui-btn layui-btn-danger layui-btn-mini">
+                                已删除
+                            </span>
                         </td>
                         <td class="td-manage">
-                            <a title="编辑" href="javascript:;" onclick="question_edit('编辑','<?php echo U('admin/question/editl',array('id'=>$row['qid']));?>','4','','510')"
-                            class="ml-5" style="text-decoration:none">
-                                <i class="layui-icon">&#xe642;</i>
+                            <a msg="确认要解封会员吗" class="del" style="text-decoration:none" onclick="member_recover(this,'<?php echo $key['uid']; ?>')" href="javascript:;" title="解封会员">
+                                <i class="layui-icon">&#xe618;</i>
                             </a>
-                            <a class="dele" title="删除" href="javascript:;" onclick="question_del(this,<?php echo $row['qid'] ?>)" 
+                           <!--  <a title="彻底删除" href="javascript:;" onclick="member_unset(this,'1')" 
                             style="text-decoration:none">
                                 <i class="layui-icon">&#xe640;</i>
-                            </a>
+                            </a> -->
                         </td>
                     </tr>
-                  <?php } ?>
+                   <?php } ?>
+                    
                 </tbody>
             </table>
 
@@ -132,13 +144,15 @@
               layer = layui.layer;//弹出层
 
               //以上模块根据需要引入
-              $('#all').click(function(event) {
-                    if ($(this).prop("checked")) {
-                        $('.son').prop("checked",true);
-                    }else{
-                        $('.son').prop("checked",false);
-                    };
-                 });
+
+              laypage({
+                cont: 'page'
+                ,pages: 100
+                ,first: 1
+                ,last: 100
+                ,prev: '<em><</em>'
+                ,next: '<em>></em>'
+              }); 
               
               var start = {
                 min: laydate.now()
@@ -167,83 +181,46 @@
                 end.elem = this
                 laydate(end);
               }
+              
             });
 
-            //批量删除提交
-             function delAll () {
-                layer.confirm('确认要删除吗？',function(index){
-                    //捉到所有被选中的，发异步进行删除
-                    uids = '';
+            //批量恢复提交
+             function recoverAll () {
+                layer.confirm('确认要批量恢复吗？',function(index){
+                    //捉到所有被选中的，发异步进行恢复
+                   
 
-                    for (var i = 0; i < $('.son:checked').length; i++) {
-                        uids+=$('.son:checked').eq(i).val();
-                        uids+=',';
-                    };
 
-                    $.ajax({
-                      url: '<?php echo U('admin/question/deleAll3');?>',
-                      type: 'post',
-                      dataType: 'json',
-                      data: {uids: uids},
-                    })
-                    .done(function(res) {
-                       if (res.error==0) {
-                             $('.son:checked').parents('tr').remove();
-                             // parent.location.reload();
-                            layer.msg('删除成功', {icon: 1});
-                            // var index = parent.layer.getFrameIndex(window.name);
-                            
-
-                        };
-                    })
-
+                    layer.msg('恢复成功', {icon: 1});
                 });
              }
 
-             function question_show (argument) {
-
-
-                layer.msg('可以跳到前台具体问题页面',{icon:1,time:1000});
-             }
-             /*添加*/
-            function question_add(title,url,w,h){
-                x_admin_show(title,url,w,h);
-            }
-            //编辑 
-           function question_edit (title,url,id,w,h) {
-                x_admin_show(title,url,w,h); 
-            }
-
-            /*删除*/
-            function question_del(obj,id){ //点击执行删除的方法
-              
-                layer.confirm('确认要删除吗？',function(index){
+            /*用户-恢复*/
+            function member_recover(obj,id){
+                layer.confirm('确认要恢复吗？',function(index){
                     //发异步删除数据
-                    // uid = $(this).attr('uid');
-
-                    $.ajax({
-                      url: '<?php echo U('admin/question/delel');?>',
-                      type: 'post',
-                      dataType: 'json',
-                      data: {qid: id},
-                    })
-                    .done(function(res) {
-                      if (res.error==0) {
+                   $.ajax({
+                       url: '<?php echo U('admin/user/dele');?>',
+                       type: 'post',
+                       dataType: 'json',
+                       data: {uid: id},
+                   })
+                   .done(function() {
                         $(obj).parents("tr").remove();
-                        layer.msg('已删除!',{icon:1,time:1000},);
-
-                        }else{
-
-                        $(obj).parents("tr").remove();
-                        layer.msg('显示正常!',{icon:1,time:1000},);
-                        };
-                    })
-              
+                        layer.msg('已恢复!',{icon:1,time:1000});
+                   })
 
                     
                 });
             }
+            /*用户-彻底删除*/
+            function member_unset(obj,id){
+                layer.confirm('彻底删除无法恢复，确认要删除数据吗？',function(index){
+                    //发异步删除数据
+                    $(obj).parents("tr").remove();
+                    layer.msg('已彻底删除',{icon:1,time:1000});
+                });
+            }
             </script>
-         
     </body>
 </html>
