@@ -4,8 +4,45 @@ use Think\Controller;
 class QuestionController extends Controller {
     public function index(){
     	$sql = "select t1.*,t2.nickname,t3.cname from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.dele='0'";
-    	$question = M()->query($sql);
+    	
+        if ($_GET) {
+            $start = strtotime($_GET['start']);
+            $end = strtotime($_GET['end']);
+            $title = $_GET['title'];
+
+            if (!$start) {
+                $start=strtotime('2017-08-01');
+            }
+            if (!$end) {
+               $end = time();
+            }
+
+            // $sql = "select * from question where create_time > {$start} and create_time < $end and title like '%$title%'";
+           // $question = M()->query($sql);
+
+            $map['create_time&create_time'] = array(array('GT', $start), array('LT', $end), '_multi' => true);
+            $map['title'] = array('like','%'.$title.'%');
+            $count = M('question')->where($map)->count(); 
+
+            $Page       = new \Think\Page($count,1);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+            $show       = $Page->show();// 分页显示输出
+
+            $question = M('question')->where($map)->limit($Page->firstRow.','.$Page->listRows)->select();
+            // var_dump($question);
+
+
+        }else{
+
+            $question = M('question')->select();
+        }
+
+
+
+        // $question = M()->query($sql);
+        $this->assign('page',$show);
+        $this->assign('data',$_GET);
     	$this->assign('question',$question);
+
         $this->display();
     }
 

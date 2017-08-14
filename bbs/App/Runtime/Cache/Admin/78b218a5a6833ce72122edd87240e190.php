@@ -29,18 +29,18 @@
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
         <div class="x-body">
-            <form class="layui-form x-center" action="" style="width:800px">
+            <form method="get" class="layui-form x-center" action="" style="width:800px">
                 <div class="layui-form-pane" style="margin-top: 15px;">
                   <div class="layui-form-item">
                     <label class="layui-form-label">日期范围</label>
                     <div class="layui-input-inline">
-                      <input class="layui-input" placeholder="开始日" id="LAY_demorange_s">
+                      <input name="start" value="<?php echo $data['start']; ?>" class="layui-input" placeholder="开始日" id="LAY_demorange_s">
                     </div>
                     <div class="layui-input-inline">
-                      <input class="layui-input" placeholder="截止日" id="LAY_demorange_e">
+                      <input name="end" value="<?php echo $data['end']; ?>" class="layui-input" placeholder="截止日" id="LAY_demorange_e">
                     </div>
                     <div class="layui-input-inline">
-                      <input type="text" name="username"  placeholder="标题" autocomplete="off" class="layui-input">
+                      <input type="text" name="title" value="<?php echo $data['title']; ?>" placeholder="标题" autocomplete="off" class="layui-input">
                     </div>
                     <div class="layui-input-inline" style="width:80px">
                         <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
@@ -121,7 +121,9 @@
                 </tbody>
             </table>
 
-            <div id="page"></div>
+            <div id="page">
+              <?php echo $page; ?>
+            </div>
         </div>
         <script>
             layui.use(['laydate','element','laypage','layer'], function(){
@@ -141,7 +143,7 @@
                  });
               
               var start = {
-                min: laydate.now()
+                min: "2017-08-01"
                 ,max: '2099-06-16 23:59:59'
                 ,istoday: false
                 ,choose: function(datas){
@@ -151,7 +153,7 @@
               };
               
               var end = {
-                min: laydate.now()
+                min: "2017-08-01"
                 ,max: '2099-06-16 23:59:59'
                 ,istoday: false
                 ,choose: function(datas){
