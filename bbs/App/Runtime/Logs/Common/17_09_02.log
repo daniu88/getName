@@ -1,0 +1,204 @@
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:24+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/images/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:27+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000720s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:27+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:27+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:29+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:29+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:29+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:29+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:32+08:00 ] 127.0.0.1 /GetName/bbs/comment-list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001920s ]
+ERR: 无法加载模块:Comment-list
+
+[ 2017-09-02T17:54:33+08:00 ] 127.0.0.1 /GetName/bbs/feedback-list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+ERR: 无法加载模块:Feedback-list
+
+[ 2017-09-02T17:54:35+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:35+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:35+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:36+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:36+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:36+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:36+08:00 ] 127.0.0.1 /GetName/bbs/member-level.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+ERR: 无法加载模块:Member-level
+
+[ 2017-09-02T17:54:37+08:00 ] 127.0.0.1 /GetName/bbs/member-kiss.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+ERR: 无法加载模块:Member-kiss
+
+[ 2017-09-02T17:54:38+08:00 ] 127.0.0.1 /GetName/bbs/member-view.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001529s ]
+ERR: 无法加载模块:Member-view
+
+[ 2017-09-02T17:54:40+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001089s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:40+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000079s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:41+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001269s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:41+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:41+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:41+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:42+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000987s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:42+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001051s ]
+ERR: 无法加载模块:Public
+
+[ 2017-09-02T17:54:42+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/layui2.0/layui.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+ERR: 无法加载模块:Public
+

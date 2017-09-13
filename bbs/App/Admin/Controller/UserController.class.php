@@ -1,14 +1,50 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class UserController extends Controller {
+class UserController extends CommonController {
     public function index(){
-    	$user = M('user')->select();
+    	// $user = M('user')->select();
 
-        $tot = "select count('id') tot from user";
+        if ($_GET) {
+            $start = strtotime($_GET['start']);
+            $end = strtotime($_GET['end']);
+            $nickname = $_GET['nikname'];
+
+            if (!$start) {
+                $start=strtotime('2017-07-01');
+            }
+            if (!$end) {
+               $end = time();
+            }
+
+
+            // $sql ="select * from user where create_time > {$start} and create_time < {$end} and nickname like '%$nickname%'";
+
+             $map['create_time&create_time'] = array(array('GT', $start), array('LT', $end), '_multi' => true);
+            $map['nickname'] = array('like','%'.$nickname.'%');
+
+            // $user = M('user')->where($map)->select();
+            // var_dump(M('user'));
+
+            $count = M('user')->where($map)->count(); 
+
+            $Page       = new \Think\Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+            $show       = $Page->show();// 分页显示输出
+
+            $user = M('user')->where($map)->limit($Page->firstRow.','.$Page->listRows)->select();
+
+        }else{
+           $user = M('user')->select();  
+        }
+
+
+        $tot = "select count('id') tot from user";//cunt统计
+
         $tot = M()->query($tot);
         $this->assign('tot',$tot);
-    	$this->assign('user',$user);   
+        $this->assign('data',$_GET);
+    	$this->assign('page',$show);
+        $this->assign('user',$user);  
         $this->display();
     }
 
@@ -107,28 +143,6 @@ class UserController extends Controller {
 
 
 
-    public function admin_list()//管理员列表
-    {
-        $this->display('admin_list');
-    }
-
-    public function admin_role()//角色管理
-    {
-        $this->display('admin_role');
-    }
-
-    public function admin_cate()//权限分类
-    {
-        $this->display('admin_cate');
-    }
-
-
-    public function admin_rule()//权限管理
-    {
-
-
-        $this->display('admin_rule');
-    }
 
 
 }

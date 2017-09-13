@@ -14,7 +14,10 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="/GetName/bbs/Public/admin/css/x-admin.css" media="all">
+        <link rel="stylesheet" href="/GetName/bbs/Public/admin/layui2.0/layui.css" media="all">
         <script src="/GetName/bbs/Public/admin/lib/layui/layui.js" charset="utf-8">
+        </script>
+        <script src="/GetName/bbs/Public/admin/layui2.0/layui.js" charset="utf-8">
         </script>
         <script src="/GetName/bbs/Public/admin/js/x-admin.js"></script>
         <script src="/GetName/bbs/Public/admin/js/x-layui.js"></script>

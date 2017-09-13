@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class PasswordsController extends Controller {
+class PasswordsController extends CommonController {
     public function index(){
 
 

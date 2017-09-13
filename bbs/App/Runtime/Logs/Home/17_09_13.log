@@ -1,0 +1,940 @@
+[ 2017-09-13T09:36:25+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0085s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0093s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016143s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000983s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001167s ]
+
+[ 2017-09-13T09:37:19+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/qqlogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000950s ]
+
+[ 2017-09-13T09:37:27+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/qqlogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-09-13T09:46:57+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0817s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0191s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0014s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0018s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000468s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001130s ]
+
+[ 2017-09-13T09:46:59+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/qqlogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\qqConnect\API\qqConnectAPI.php 第 2 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001764s ]
+
+[ 2017-09-13T09:53:08+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0076s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0085s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0006s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2017-09-13T09:53:13+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0078s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0583s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000486s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001703s ]
+
+[ 2017-09-13T09:54:27+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `user` WHERE `email` = '123@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0170s ]
+NOTIC: [8] Undefined variable: url D:\Program\www\GetName\bbs\App\Home\Controller\LoginController.class.php 第 43 行.
+
+[ 2017-09-13T09:54:28+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/null
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+ERR: 非法操作:null
+
+[ 2017-09-13T09:58:15+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `user` WHERE `email` = '123@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-09-13T09:58:16+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+ERR: 非法操作:undefined
+
+[ 2017-09-13T10:04:17+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+ERR: 非法操作:index.php
+
+[ 2017-09-13T10:04:49+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+ERR: 非法操作:undefined
+
+[ 2017-09-13T10:04:56+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0349s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 0 [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0271s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 0 AND `uid` = 44 LIMIT 1   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `zan` [ RunTime:0.0509s ]
+SQL: SELECT * FROM `zan` WHERE `aid` = 7 AND `uid` = 44 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `zan` WHERE `aid` = 8 AND `uid` = 44 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined index: id D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 175 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2017-09-13T10:04:56+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0445s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0133s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0007s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0010s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029373s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002369s ]
+
+[ 2017-09-13T10:05:18+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/set/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0605s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000529s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002335s ]
+
+[ 2017-09-13T10:07:31+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/set/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2017-09-13T10:07:32+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000758s ]
+
+[ 2017-09-13T10:07:38+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+
+[ 2017-09-13T10:08:12+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000506s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051660s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001641s ]
+
+[ 2017-09-13T10:08:13+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0084s ]
+SQL: select * from vercode order by rand() limit 1 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2017-09-13T10:08:29+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `user` WHERE `email` = '123@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-13T10:08:30+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/:U('home/set/index')
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+ERR: 非法操作::U('home
+
+[ 2017-09-13T10:08:56+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0109s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `user` WHERE `email` = '123456@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-13T10:09:02+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `user` WHERE `email` = '123@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2017-09-13T10:09:03+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/U('home/set/index')
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+ERR: 非法操作:U('home
+
+[ 2017-09-13T10:12:00+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/U('home/set/index')
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+ERR: 非法操作:U('home
+
+[ 2017-09-13T10:12:15+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `user` WHERE `email` = '12346@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-13T10:12:21+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/login/checkdata.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `vercode` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `user` WHERE `email` = '123@qq.com' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-09-13T10:12:23+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/set/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010598s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2017-09-13T10:14:25+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0108s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0574s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0009s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0011s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039358s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000941s ]
+
+[ 2017-09-13T10:21:32+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/search/index.html?q=%E5%A4%A7%E5%A4%A7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+NOTIC: [2048] Redefining already defined constructor for class PSCWS4 D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\pscws4.class.php 第 120 行.
+NOTIC: [2048] Redefining already defined constructor for class XDB_R D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\xdb_r.class.php 第 34 行.
+SQL: select * from question where  title like '%大大%' [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019138s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2017-09-13T10:21:46+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/search/index.html?q=%E8%AF%B4%E5%88%B0%E5%BA%95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+NOTIC: [2048] Redefining already defined constructor for class PSCWS4 D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\pscws4.class.php 第 120 行.
+NOTIC: [2048] Redefining already defined constructor for class XDB_R D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\xdb_r.class.php 第 34 行.
+SQL: select * from question where  title like '%说到底%' [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2017-09-13T10:22:22+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/search/index.html?q=%E6%89%93%E6%AD%BB%E5%A4%A7%E5%9B%9B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+NOTIC: [2048] Redefining already defined constructor for class PSCWS4 D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\pscws4.class.php 第 120 行.
+NOTIC: [2048] Redefining already defined constructor for class XDB_R D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\xdb_r.class.php 第 34 行.
+SQL: select * from question where  title like '%大四%' or title like '%打死%' [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000712s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001256s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001175s ]
+
+[ 2017-09-13T10:24:16+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001439s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0111s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( top<>1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 0,6 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2017-09-13T10:24:19+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/unsolved.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.1071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.status='未结贴' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.status='未结贴' order by create_time desc limit 0,6 [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000799s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001284s ]
+
+[ 2017-09-13T10:24:20+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/solved.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0117s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.status='已采纳' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.status='已采纳' order by create_time desc limit 0,6 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2017-09-13T10:24:21+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/wonderful.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.top='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.top='2' order by create_time desc limit 0,6 [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2017-09-13T10:24:22+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/u/index/id/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2017-09-13T10:24:22+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/u/index/id/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-09-13T10:24:24+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0090s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0101s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-09-13T10:24:36+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0113s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( top<>1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 0,6 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2017-09-13T10:25:12+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0106s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0093s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001108s ]
+
+[ 2017-09-13T10:25:12+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/unsolved.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.status='未结贴' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.status='未结贴' order by create_time desc limit 0,6 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2017-09-13T10:25:13+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/wonderful.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.top='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.top='2' order by create_time desc limit 0,6 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010918s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001244s ]
+
+[ 2017-09-13T10:25:14+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/u/index/id/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2017-09-13T10:25:14+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/u/index/id/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 44 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000645s ]
+
+[ 2017-09-13T10:25:16+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0106s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0093s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016516s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016615s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+

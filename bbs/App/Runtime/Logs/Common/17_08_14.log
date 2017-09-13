@@ -4,3 +4,15 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
 ERR: 无法加载模块:Public
 
+[ 2017-08-14T22:15:15+08:00 ] 127.0.0.1 /GetName/bbs/comment-list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+ERR: 无法加载模块:Comment-list
+
+[ 2017-08-14T22:15:16+08:00 ] 127.0.0.1 /GetName/bbs/feedback-list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+ERR: 无法加载模块:Feedback-list
+

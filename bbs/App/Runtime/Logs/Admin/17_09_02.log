@@ -1,0 +1,359 @@
+[ 2017-09-02T08:55:17+08:00 ] 127.0.0.1 /GetName/bbs/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000467s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.139244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.139430s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001248s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001537s ]
+
+[ 2017-09-02T08:55:17+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000713s ]
+
+[ 2017-09-02T08:55:22+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2017-09-02T08:55:23+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001237s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001389s ]
+
+[ 2017-09-02T17:54:23+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000197s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000426s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000993s ]
+
+[ 2017-09-02T17:54:27+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/question/category.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013541s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013718s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001435s ]
+
+[ 2017-09-02T17:54:29+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `question`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: show D:\Program\www\GetName\bbs\App\Admin\Controller\QuestionController.class.php 第 42 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000421s ]
+NOTIC: [8] Undefined index: start D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 40 行.
+NOTIC: [8] Undefined index: end D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 43 行.
+NOTIC: [8] Undefined index: title D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 46 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+NOTIC: [8] Undefined index: cname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 101 行.
+NOTIC: [8] Undefined index: nickname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\78b218a5a6833ce72122edd87240e190.php 第 104 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081415s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000902s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2017-09-02T17:54:29+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/question/dele.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+SQL: select t1.*,t2.nickname,t3.cname from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.dele='1' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001029s ]
+
+[ 2017-09-02T17:54:35+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/user/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0199s ]
+SQL: SELECT * FROM `user`  [ RunTime:0.0006s ]
+SQL: select count('id') tot from user [ RunTime:0.0190s ]
+NOTIC: [8] Undefined variable: show D:\Program\www\GetName\bbs\App\Admin\Controller\UserController.class.php 第 46 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined index: start D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\4295d5db477f3199c8db51638416159f.php 第 40 行.
+NOTIC: [8] Undefined index: end D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\4295d5db477f3199c8db51638416159f.php 第 43 行.
+NOTIC: [8] Undefined index: nikname D:\Program\www\GetName\bbs\App\Runtime\Cache\Admin\4295d5db477f3199c8db51638416159f.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001364s ]
+
+[ 2017-09-02T17:54:35+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/user/del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001358s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `user` WHERE `status` = '1'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001185s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001321s ]
+
+[ 2017-09-02T17:54:40+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: select t1.*,t3.title from admin t1 left join auth_group_access t2 on t1.aid=t2.uid left join auth_group t3 on t2.group_id=t3.id [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001437s ]
+
+[ 2017-09-02T17:54:41+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/admin/admin_role.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `auth_group` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `auth_group`  [ RunTime:0.0004s ]
+SQL: select title name from auth_rule where id in (1,2,6,8,10,18,11,12) limit 4 [ RunTime:0.0170s ]
+SQL: select title name from auth_rule where id in (9,10,6,5,8,1) limit 4 [ RunTime:0.0004s ]
+SQL: select title name from auth_rule where id in (9,13,8,1) limit 4 [ RunTime:0.0006s ]
+SQL: select title name from auth_rule where id in (8,1,2,6) limit 4 [ RunTime:0.0008s ]
+SQL: select title name from auth_rule where id in (8,1,2,6,10,11,12) limit 4 [ RunTime:0.0005s ]
+SQL: select title name from auth_rule where id in (8,1,6,10,11,12) limit 4 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000476s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056718s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001737s ]
+
+[ 2017-09-02T17:54:41+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/admin/admin_cate.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `auth_cate` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `auth_cate`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2017-09-02T17:54:42+08:00 ] 127.0.0.1 /GetName/bbs/index.php/admin/admin/admin_rule.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `auth_rule` [ RunTime:0.0138s ]
+SQL: SELECT t1.*,t2.cname FROM auth_rule t1 left join auth_cate t2 on t1.cid=t2.cid   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `auth_cate` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `auth_cate`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+

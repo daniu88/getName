@@ -1,0 +1,12 @@
+[ 2017-08-17T08:31:29+08:00 ] 127.0.0.1 /GetName/bbs/Public/admin/images/favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+ERR: 无法加载模块:Public
+
+[ 2017-08-17T23:09:12+08:00 ] 127.0.0.1 /GetName/bbs/index.php/ThinkPHP/Library/Vendor/qqConnect/install
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+ERR: 无法加载模块:ThinkPHP
+

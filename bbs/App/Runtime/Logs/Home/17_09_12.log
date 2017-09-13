@@ -1,0 +1,465 @@
+[ 2017-09-12T09:56:41+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006164s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0108s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0101s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0006s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0007s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.018076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.018222s ]
+
+[ 2017-09-12T09:56:54+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/all.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( top<>1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 0,6 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001070s ]
+
+[ 2017-09-12T09:56:56+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/unsolved.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.status='未结贴' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.status='未结贴' order by create_time desc limit 0,6 [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015738s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000865s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2017-09-12T09:56:58+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/solved.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0088s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.status='已采纳' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.status='已采纳' order by create_time desc limit 0,6 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010900s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001259s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001391s ]
+
+[ 2017-09-12T09:57:02+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/index/wonderful.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `question` WHERE ( question.top='2' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' and t1.top='2' order by create_time desc limit 0,6 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+
+[ 2017-09-12T09:57:04+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0084s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0074s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0005s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016427s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2017-09-12T23:54:52+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000081s ]
+INFO: [ app_init ] --END-- [ RunTime:0.030422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.027170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027499s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0125s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0131s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0009s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0007s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008363s ]
+
+[ 2017-09-12T23:54:57+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/search/index.html?q=%E5%88%BB%E8%AD%A6%E9%86%92%E8%87%AA%E5%B7%B1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+NOTIC: [2048] Redefining already defined constructor for class PSCWS4 D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\pscws4.class.php 第 120 行.
+NOTIC: [2048] Redefining already defined constructor for class XDB_R D:\Program\www\GetName\bbs\ThinkPHP\Library\Vendor\pscws4\xdb_r.class.php 第 34 行.
+SQL: select * from question where  title like '%警醒%' or title like '%自己%' [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2017-09-12T23:55:00+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index/id/56.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0278s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 56 [ RunTime:0.0381s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='56' [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Home\Controller\JieController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 56 AND `uid` = null LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='56' [ RunTime:0.0003s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2017-09-12T23:55:05+08:00 ] 127.0.0.1 /GetName/bbs/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0096s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0075s ]
+SQL: SELECT `face`,`nickname`,`uid`,`answer_num` FROM `user` ORDER BY answer_num desc LIMIT 12   [ RunTime:0.0004s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top='1' [ RunTime:0.0006s ]
+SQL: select t1.*,t2.nickname,t2.face,t3.cname  from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.top<>'1' order by create_time desc limit 6  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 122 行.
+NOTIC: [8] Use of undefined constant p - assumed 'p' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\00e52909bed743ea261af4b6823297ff.php 第 257 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2017-09-12T23:55:11+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index/id/55.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0076s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 55 [ RunTime:0.0366s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='55' [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Home\Controller\JieController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 55 AND `uid` = null LIMIT 1   [ RunTime:0.0006s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='55' [ RunTime:0.0008s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023623s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001197s ]
+
+[ 2017-09-12T23:55:14+08:00 ] 127.0.0.1 /GetName/bbs/index.php/home/jie/index/id/49.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `question` [ RunTime:0.0077s ]
+SQL: UPDATE `question` SET `view_num`=view_num+1 WHERE `qid` = 49 [ RunTime:0.0363s ]
+SQL: select t1.*,t2.nickname,t2.face from question t1 left join user t2 on t1.uid=t2.uid where t1.qid='49' [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: uid D:\Program\www\GetName\bbs\App\Home\Controller\JieController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `collect` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `collect` WHERE `qid` = 49 AND `uid` = null LIMIT 1   [ RunTime:0.0003s ]
+SQL: select t1.*,t2.nickname,t2.face from answer t1 left join user t2 on t1.uid=t2.uid where t1.qid='49' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `zan` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `zan` WHERE `aid` = 42 AND `uid` = null LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `qid`,`title`,`answer_num` FROM `question` ORDER BY answer_num desc LIMIT 10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant home - assumed 'home' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant jie - assumed 'jie' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+NOTIC: [2] Division by zero D:\Program\www\GetName\bbs\App\Runtime\Cache\Home\12cc94d49931da457519909eb924ded5.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001263s ]
+

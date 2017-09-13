@@ -73,7 +73,7 @@
             </a>
           </span>
           <p class="out-login">
-            <a href="http://fly.layui.com/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+            <a href="<?php echo U('home/login/qqlogin');?>"
             class="iconfont icon-qq" title="QQ登入">
             </a>
             <a href="http://fly.layui.com/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
@@ -151,7 +151,7 @@
                     <span>
                       或者使用社交账号登入
                     </span>
-                    <a href="http://fly.layui.com/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+                    <a href="<?php echo U('home/login/qqlogin');?>"
                     class="iconfont icon-qq" title="QQ登入">
                     </a>
                     <a href="http://fly.layui.com/app/weibo/" onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
@@ -188,7 +188,7 @@
                         layer.msg(res.info,function(){});
                      }else{
                         layer.alert(res.info, {icon: 6},function(){
-                            location.href="<?php echo U('home/set/index');?>";
+                            location.href=res.url;
                         });
                      }
                   })

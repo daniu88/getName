@@ -14,7 +14,10 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="/GetName/bbs/Public/admin/css/x-admin.css" media="all">
+        <link rel="stylesheet" href="/GetName/bbs/Public/admin/layui2.0/layui.css" media="all">
         <script src="/GetName/bbs/Public/admin/lib/layui/layui.js" charset="utf-8">
+        </script>
+        <script src="/GetName/bbs/Public/admin/layui2.0/layui.js" charset="utf-8">
         </script>
         <script src="/GetName/bbs/Public/admin/js/x-admin.js"></script>
         <script src="/GetName/bbs/Public/admin/js/x-layui.js"></script>
@@ -128,7 +131,7 @@
                                 </dd>
                                 <dd class="">
                                     <a href="javascript:;" _href="./member-view.html">
-                                        <cite>浏览记录</cite>
+                                        <cite>浏览记录</cadmin
                                     </a>
                                 </dd>
                                 <dd class="">
@@ -144,22 +147,22 @@
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
-                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_list');?>">
+                                    <a href="javascript:;" _href="<?php echo U('admin/admin/index');?>">
                                         <cite>管理员列表</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_role');?>">
+                                    <a href="javascript:;" _href="<?php echo U('admin/admin/admin_role');?>">
                                         <cite>角色管理</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_cate');?>">
+                                    <a href="javascript:;" _href="<?php echo U('admin/admin/admin_cate');?>">
                                         <cite>权限分类</cite>
                                     </a>
                                 </dd>
                                 <dd class="">
-                                    <a href="javascript:;" _href="<?php echo U('admin/user/admin_rule');?>">
+                                    <a href="javascript:;" _href="<?php echo U('admin/admin/admin_rule');?>">
                                         <cite>权限管理</cite>
                                     </a>
                                 </dd>

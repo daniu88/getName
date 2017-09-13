@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class QuestionController extends Controller {
+class QuestionController extends CommonController {
     public function index(){
     	$sql = "select t1.*,t2.nickname,t3.cname from question t1 inner join user t2 on t1.uid=t2.uid inner join category t3 on t1.cid=t3.cid where t1.dele='0'";
     	
@@ -172,6 +172,14 @@ class QuestionController extends Controller {
 
     public function category()
     {
+
+
+
+
+
+
+
+        
         $this->display('category');
     }
 

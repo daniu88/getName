@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class EditController extends Controller {
+class EditController extends CommonController {
     public function index(){
     	$uid = I('get.uid');
     	$user = M('user')->where(['uid'=>$uid])->find();
