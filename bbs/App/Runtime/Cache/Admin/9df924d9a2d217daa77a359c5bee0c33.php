@@ -129,16 +129,16 @@
                                         <cite>积分管理</cite>
                                     </a>
                                 </dd>
-                                <dd class="">
+                                <!-- <dd class="">
                                     <a href="javascript:;" _href="./member-view.html">
-                                        <cite>浏览记录</cadmin
+                                        <cite>浏览记录</cadmin>
                                     </a>
                                 </dd>
                                 <dd class="">
                                     <a href="javascript:;" _href="./member-view.html">
                                         <cite>分享记录</cite>
                                     </a>
-                                </dd>
+                                </dd> -->
                             </dl>
                         </li>
                         <li class="layui-nav-item">
